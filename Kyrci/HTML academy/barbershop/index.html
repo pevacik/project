@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>barbershop</title>
+    <title>Барбершоп "Бородинский"</title>
   </head>
   <body>
     <header>
@@ -72,22 +72,27 @@
       <section>
         <h3>Фотогалерея</h3>
         <figure>
-          <a href="">
-            <img src="" alt="интерьер" />
+          <a href="#">
+            <img src="img/studio.jpg" width="286" height="164" alt="интерьер" />
           </a>
         </figure>
-        <button type="button">Назад</button>
+        <button type="button" disabled>Назад</button>
         <button type="button">Вперед</button>
       </section>
       <section>
         <h3>Контктная информация</h3>
         <p>
-          БАРБЕРШОП «БОРОДИНСКИЙ» АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д.
-          19/8 ТЕЛЕФОН: +7 (812) 666-02-66
+          БАРБЕРШОП «БОРОДИНСКИЙ»<br />
+          АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д.19/8 <br />
+          ТЕЛЕФОН: <a href="tel: +7126660266">+7 (812) 666-02-66</a>
         </p>
-        <p>ВРЕМЯ РАБОТЫ: ПН—ПТ: С 10:00 ДО 22:00 СБ—ВС: С 10:00 ДО 19:00</p>
-        <button type="button">Как проехать</button>
-        <button type="button">Обратная связь</button>
+        <p>
+          ВРЕМЯ РАБОТЫ:<br />
+          ПН—ПТ: С 10:00 ДО 22:00<br />
+          СБ—ВС: С 10:00 ДО 19:00
+        </p>
+        <a href="blank.html">Как проехать</a>
+        <a href="blank.html">Обратная связь</a>
       </section>
       <section>
         <h3>Записаться</h3>
@@ -95,12 +100,91 @@
           УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ
           БРОНИ
         </p>
-        <input type="text" /><input type="text" /><input type="text" /><input
-          type="text"
-        />
-        <button type="button">Отправить</button>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label for="appointment-date">Дата</label>
+            <input id="appointment-date" type="text" placeholder="08.10.2017" />
+          </p>
+          <p>
+            <label for="appointment-time">Время</label>
+            <input id="appointment-time" type="text" placeholder="10:00" />
+          </p>
+          <p>
+            <label for="appointment-name">Ваше имя</label>
+            <input id="appointment-name" type="text" placeholder="Борода" />
+          </p>
+          <p>
+            <label for="appointment-tel">Телефон</label>
+            <input
+              id="appointment-tel"
+              type="text"
+              placeholder="+7 123 456 78 90"
+            />
+          </p>
+          <button type="submit">Отправить</button>
+        </form>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <section>
+        <h2>Как нас найти</h2>
+        <p>
+          БАРБЕРШОП «БОРОДИНСКИЙ» <br />
+          АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8 <br />
+          КАК НАС НАЙТИ? <br />
+          ТЕЛЕФОН: <a href="tel: +78126660266">+7 (812) 666-02-66</a>
+        </p>
+      </section>
+      <section>
+        <h2>Давайте дружить</h2>
+        <ul>
+          <li><a href="#">Вконтакте</a></li>
+          <li><a href="#">Фейсбук</a></li>
+          <li><a href="#">Инстаграм</a></li>
+        </ul>
+      </section>
+      <p>
+        разработано
+        <a href="https://htmlacademy.ru">HTML Academy</a>
+      </p>
+      <section>
+        <h2>Личный кабинет</h2>
+        <p>Ведите пожалуйста свой логин и пароль</p>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label for="login-login">Логин</label>
+            <input
+              id="login-login"
+              type="email"
+              name="login"
+              placeholder="email@example.com"
+            />
+          </p>
+          <p>
+            <label for="login-password">Пароль</label>
+            <input
+              id="login-password"
+              type="password"
+              name="password"
+              placeholder="••••••••"
+            />
+          </p>
+          <p>
+            <label for="">
+              <input type="checkbox" name="remember" />
+              Запомнить меня
+            </label>
+            <a href="#">Я забыл пароль</a>
+          </p>
+          <button type="submit">Войти</button>
+        </form>
+        <button type="button">Закрыть</button>
+      </section>
+      <section>
+        <h2>как до на добраться</h2>
+        <!-- Здесь будет карта-->
+        <button type="button">Закрыть</button>
+      </section>
+    </footer>
   </body>
 </html>

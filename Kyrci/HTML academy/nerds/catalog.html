@@ -1,35 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/nerds/css/style.css">
+    <link rel="stylesheet" href="/nerds/css/normolize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Каталог нердс</title>
   </head>
   <body>
-    <header class="main-hadder">
-      <nav class="main-nav">
-        <a href="index.html" class="main-nav-logo"
-          ><img src="img/nerds-logo.svg" alt="логотип нердс"
-        /></a>
-        <ul>
-          <li><a href="blank.html">Студия</a></li>
-          <li><a href="blank.html">Клиенты</a></li>
-          <li><a href="catalog.html">Магазин</a></li>
-          <li><a href="blank.html">Контакты</a></li>
-        </ul>
-        <p>
-          <img
-            src="img/cart-icon.svg"
-            width="15"
-            height="15"
-            alt="Иконка корзины" 
-          />
-          <a class="cart" href="#">Корзина</a>
-        </p>
-      </nav>
-    </header>
+    <form action="" method="post">
+      <header class="main-hadder">
+        <nav class="main-nav">
+          <a href="index.html" class="main-nav-logo"
+            ><img src="img/nerds-logo.svg" alt="логотип нердс"
+          /></a>
+          <ul class="user-navigation">
+            <li><a class="main-nav" href="blank.html">Студия</a></li>
+            <li><a class="main-nav" href="blank.html">Клиенты</a></li>
+            <li><a class="main-nav" href="catalog.html">Магазин</a></li>
+            <li><a class="main-nav" href="blank.html">Контакты</a></li>
+          </ul>
+          <p>
+            <img
+              src="img/cart-icon.svg"
+              width="15"
+              height="15"
+              alt="Иконка корзины" 
+            />
+            <a class="cart" href="#">Корзина</a>
+          </p>
+        </nav>
+      </header>
 
     <main>
-      <h1>Магазин готовых шаблонов</h1>
+      <h1 class="catalog-main-heading">Магазин готовых шаблонов</h1>
       <section class="filters">
         <h2>Фильтры шаблонов</h2>
         <form class="form-filter" action="https://echo.htmlacademy.ru" method="post">
@@ -126,7 +130,7 @@
                   </defs>
                   </svg>
                   
-                  <img src="img/1sedona.jpg" alt="скрин седона">
+                  <img  src="img/1sedona.jpg" alt="скрин седона">
                    <h3>Sedona</h3>
                    <p>Информационный сайт для туристов</p>
                     <a class="button product-price-button" href="#">9 000р</a>
@@ -261,7 +265,7 @@
     <h2>Контакты</h2>
       <p class="footer-heading">NЁRDS DESIGN STUDIO</p>
       <p>191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8 <br>тел. <a class="contacts-phone" href="tel: +78122757575">+7 (812) 275-75-75</a></p>
-        <a class="button" href="#">Напишите нам</a>
+      <button class="button button-contacts" href="#">Напишите нам</button>
       </section>
 
     <section class="footer-map">
@@ -270,13 +274,23 @@
 
   
     <ul class="social-button" >
-      <li><img class="social" src="img/vk-icon.svg" alt="иконка вк"><a href="htmlacademy.ru"></img></a></li>
-      <li><img class="social" src="img/fb-icon.svg" alt="иконка фейсбук"><a href="htmlacademy.ru"></img></a></li>
-      <li><img class="social" src="img/insta-icon.svg" alt="иконка инстаграм"><a href="htmlacademy.ru"></img></a></li>
+      <li><a href="htmlacademy.ru"><img class="social" src="img/vk-icon.svg" alt="иконка вк"></img></a></li>
+      <li><a href="htmlacademy.ru"><img class="social" src="img/fb-icon.svg" alt="иконка фейсбук"></a></li>
+      <li><a href="htmlacademy.ru"><img class="social" src="img/insta-icon.svg" alt="иконка инстаграм"></a></li>
     </ul>
 
-    <p><span class="bold"> Давайте дружить, это выгодно</span> <br>
+    <p><span class="bold lets-friends"> Давайте дружить, это выгодно</span> <br>
     Скидка 10% для друзей из социальных сетей.</p>
   </footer>
+  <section>
+ <h2>обратная связь</h2>
+
+ <input type="text" placeholder="Имя Фамилия">
+ <input type="email" placeholder="email@example.com">
+ <p>Текст письма</p>
+ <textarea placeholder="В свободной форме" name="" id="" cols="30" rows="10"></textarea>
+ <button class="button button-Feedback" >Отправить</button>
+  </section>
+</form>
   </body>
 </html>

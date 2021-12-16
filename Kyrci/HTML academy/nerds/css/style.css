@@ -1,0 +1,244 @@
+:root {
+  --header-nav-rest: #000;
+  --header-nav-aiming: #fb565a;
+
+  --all-button-rest: #fb565a;
+  --all-button-aiming: #e74246;
+  --all-button-push: #d7373b;
+
+  --button-app-rest: #00ca74;
+  --button-app-aiming: #00bc6c;
+  --button-app-push: #00aa62;
+
+  --button-prezentation-rest: #efc84a;
+  --button-prezentation-aiming: #eab534;
+  --button-prezentation-push: #e5a722;
+
+  --button-filter-rest: #eeeeee;
+  --button-filter-aiming: #dfdfdf;
+  --button-filter-push: #d5d5d5;
+  --button-active-list: #dbdbdb;
+
+  --social-color-rest: #e1e1e1;
+
+  --popup-rest: #d7dcde;
+  --popup-aimong: #b4b9bb;
+  --popup-error: #e74246;
+
+  --filter-text: #283136;
+
+  --frame-product-color: #4d4d4d;
+
+  --total-black: #000000;
+}
+/* global */
+
+.page-body {
+  font-family: "Roboto", "roboto", Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  font-size: 16px;
+  line-height: 18px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--all-button-rest);
+}
+
+/* navigation */
+
+.main-hadder {
+  background-color: var(--button-filter-rest);
+}
+.main-nav {
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--header-nav-rest);
+}
+.user-navigation {
+  list-style: none;
+  font-weight: 500;
+}
+/* User navigation */
+
+.user-navigation a:hover {
+  color: var(--header-nav-aiming);
+}
+
+.user-navigation a:focus {
+  color: var(--header-nav-rest);
+  opacity: 30%;
+}
+
+/* slide */
+
+.slide {
+  background-color: var(--social-color-rest);
+}
+.button-slide:hover {
+  background-color: var(--all-button-aiming);
+}
+.button-slide:focus {
+  background-color: var(--all-button-push);
+}
+
+.button-slide {
+  width: 240px;
+  height: 50px;
+}
+
+.slide h3 {
+  font-size: 55px;
+  line-height: 55px;
+}
+
+/*  possibilities  */
+
+.button-site,
+.button-prezentation,
+.button-app {
+  width: 160px;
+  height: 50px;
+}
+.button-site:hover {
+  background-color: var(--all-button-aiming);
+}
+.button-site:focus {
+  background-color: var(--all-button-push);
+}
+
+.button-app {
+  background-color: var(--button-app-rest);
+}
+.button-app:hover {
+  background-color: var(--button-app-aiming);
+}
+.button-app:focus {
+  border-color: var(--button-app-push);
+}
+
+.button-prezentation {
+  background-color: var(--button-prezentation-rest);
+}
+.button-prezentation:hover {
+  border-color: var(--button-prezentation-aiming);
+}
+.button-prezentation:focus {
+  border-color: var(--button-prezentation-push);
+}
+
+.possibilities ul {
+  list-style: none;
+}
+.possibilities h3 {
+  font-size: 24px;
+}
+
+/* mission  */
+
+.merit h3 {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+}
+.bold {
+  font-weight: bold;
+}
+
+.merit ul {
+  list-style: none;
+  line-height: 55px;
+}
+
+/*   achivments   */
+
+.achievements-heading {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 64px;
+}
+.achievements-heading span {
+  font-size: 26px;
+  line-height: 40px;
+  vertical-align: top;
+}
+
+/*   partners   */
+
+.partners ul {
+  list-style: none;
+}
+
+.partner-list {
+  background-color: #000;
+}
+.partners-item img:hover {
+  background-color: red;
+}
+
+/*   footer   */
+
+.contacts p {
+  color: #666;
+}
+.footer-heading {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000;
+}
+
+.contacts-phone {
+  color: inherit;
+}
+
+.button-contacts:hover {
+  background-color: var(--all-button-aiming);
+}
+.button-contacts:focus {
+  background-color: var(--all-button-push);
+}
+.button-contacts {
+  width: 219px;
+  height: 50px;
+}
+
+.social-button a {
+  background-color: #000;
+  border: 5px solid #000;
+}
+.csocial {
+  text-align: center;
+}
+.lets-friends {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.button-Feedback {
+  width: 259px;
+  height: 50px;
+}
+
+/*   Catalog     */
+
+.catalog-main-heading {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}

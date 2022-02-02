@@ -2,295 +2,364 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/nerds/css/style.css">
-    <link rel="stylesheet" href="/nerds/css/normolize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normolize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Каталог нердс</title>
   </head>
-  <body>
+  <body class="page-body">
     <form action="" method="post">
-      <header class="main-hadder">
-        <nav class="main-nav">
+
+
+      <header class="main-hadder bacground-color">
+
+        <nav class="main-nav container">
+  
+          <div class="wrapper-nav">
           <a href="index.html" class="main-nav-logo"
-            ><img src="img/nerds-logo.svg" alt="логотип нердс"
+            ><img src="img/svg/nerds-logo.svg" alt="логотип нердс"
           /></a>
-          <ul class="user-navigation">
-            <li><a class="main-nav" href="blank.html">Студия</a></li>
-            <li><a class="main-nav" href="blank.html">Клиенты</a></li>
-            <li><a class="main-nav" href="catalog.html">Магазин</a></li>
-            <li><a class="main-nav" href="blank.html">Контакты</a></li>
+          <ul class="site-navigation">
+            <li><a  href="index.html">Студия</a></li>
+            <li><a  href="blank.html">Клиенты</a></li>
+            <li><a class="placed" href="catalog.html">Магазин</a></li>
+            <li><a  href="blank.html">Контакты</a></li>
           </ul>
-          <p>
-            <img
-              src="img/cart-icon.svg"
-              width="15"
-              height="15"
-              alt="Иконка корзины" 
-            />
             <a class="cart" href="#">Корзина</a>
-          </p>
+          </div>              
         </nav>
       </header>
+      <div class="bacground-color ">
 
-    <main>
       <h1 class="catalog-main-heading">Магазин готовых шаблонов</h1>
-      <section class="filters">
-        <h2>Фильтры шаблонов</h2>
+
+      </div>
+<div class="container">
+    <main class="catalog-container">
+     
+      <section class="catalog-filters">
+        <h2 class="visually-hidden" >Фильтры шаблонов</h2>
+
         <form class="form-filter" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset>
-          <legend class="bold" >Стоимость</legend>
-          <input type="range" name="" min="0" max="15 000" step="1" />
-          <p>
-            <label>
-              от
-              <input type="text" value="0" />
-            </label>
-            <label
-              >до
-              <input type="text" value="15 000" />
-            </label>
-          </p>
+          <fieldset class="filter-item">
+            <legend>Стоимость:</legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="
+                    width: 30%;
+                    margin-left: 20%
+                  "></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0" style="
+                  left: 20%
+                "></div>
+                <div class="toggle toggle-max" tabindex="0" style="
+                  left: 50%
+                "></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                  от <input type="number" name="min-price" value="0">
+                </label>
+                <label class="max-price">
+                  до <input type="number" name="max-price" value="15000">
+                </label>
+              </div>
+            </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="filter-item-catalog">
           <legend class="bold">Сетка</legend>
-          <ul>
-            <li>
-              <label
-                ><input
-                  type="checkbox"
-                  name="grid"
-                  value="adaptiv"
-                />Адаптивная</label
+          <ul class="filter-option-radio-list " >
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-radio"
+                  type="radio"
+                  id="adaptiv-filter"
+                  name="radio-list"
+                  checked
+                />
+              <label class="" for="adaptiv-filter">Адаптивная</label
               >
             </li>
-            <li>
-              <label
-                ><input
-                  type="checkbox"
-                  name="grid"
-                  value="fix"
-                />Фиксированая</label
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-radio"
+                  type="radio"
+                  id="fixed-filter"
+                  name="radio-list"
+                />
+              <label class="" for="fixed-filter">Фиксированая</label
               >
             </li>
-            <li>
-              <label
-                ><input
-                  type="checkbox"
-                  name="grid"
-                  value="flex"
-                />Резиновая</label
+            <li class="filter-option">
+              <input  class="visually-hidden filter-input-radio"
+                  type="radio"
+                  id="rubber-filter"
+                  name="radio-list"
+                />
+              <label class="" for="rubber-filter">Резиновая</label
               >
             </li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="filter-item-catalog">
           <legend class="bold" >Особенности</legend> 
-          <ul>
-            <li><input type="checkbox" name="features" value="slider">Слайдер</li>
-            <li><input type="checkbox" name="features" value="advantages">Блок приемуществ</li>
-            <li><input type="checkbox" name="features" value="news">Новости</li>
-            <li><input type="checkbox" name="features" value="galery">Галерея</li>
-            <li><input type="checkbox" name="features" value="basket">Корзина</li>
+          <ul class="filter-option-chekbox-list">
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="slider" id="slider-filter" checked>
+              <label class="" for="slider-filter">Слайдер</label> </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="advantage-block" id="advantage-block-filter">
+              <label class="" for="advantage-block-filter"> Блок приемуществ</label></li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="news" id="news-filter" checked>
+              <label class="" for="news-filter">Новости</label> </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-checkbox " type="checkbox" name="gallery" id="gallery-filter">
+              <label class="" for="gallery-filter">Галерея</label> </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input-checkbox" type="checkbox" name="bucket" id="bucket-filter" >
+              <label class="" for="bucket-filter">Корзина</label> </li>
           </ul>
         </fieldset>
         <button class="button button-filters" type="submit" >Показать</button>
-      </form>
+        </form>
       </section>
 
       <section class="products">
-          <h2>Сортировать:</h2>       
+        <div class="product-sort">
+          <h2>Сортировать:</h2>
 
-          <ul class="product-filters uppercase">
+          <ul class="product-filters">            
             <li>По цене</li>
             <li>По типу</li>
             <li>По названию</li>
-            <li><a class="arrow-up" href="#"></a></li>
-            <li><a class="arrow-down" href="#"></a></li>
+            <li><a class="arrow-up" href="#"><img  class="arrow-chosen arrow" src="img/png/arrow.png" alt=""></a></li>
+            <li><a class="arrow-down"  href="#"><img class=" arrow arrow-up" src="img/png/arrow.png" alt=""></a></li>
           </ul>
+        </div>
 
 
           <ul class="product-list">
               <li class="product-list-item">
-                <svg class="frame-product" width="368" height="48" viewBox="0 0 368 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g opacity="0.12" filter="url(#filter0_d_3_841)">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0H360C362.2 0 364 1.8 364 4V40H4V4C4 1.8 5.8 0 8 0ZM20.9288 23.5C22.1793 25.6658 24.4901 27 26.991 27C30.857 27 33.991 23.866 33.991 20C33.991 16.134 30.857 13 26.991 13C24.4901 13 22.1793 14.3342 20.9288 16.5C19.6784 18.6658 19.6784 21.3342 20.9288 23.5ZM50.002 27C47.5011 27 45.1903 25.6658 43.9398 23.5C42.6894 21.3342 42.6894 18.6658 43.9398 16.5C45.1903 14.3342 47.5011 13 50.002 13C53.868 13 57.002 16.134 57.002 20C57.002 23.866 53.868 27 50.002 27ZM66.9508 23.5C68.2013 25.6658 70.5121 27 73.013 27C76.879 27 80.013 23.866 80.013 20C80.013 16.134 76.879 13 73.013 13C70.5121 13 68.2013 14.3342 66.9508 16.5C65.7004 18.6658 65.7004 21.3342 66.9508 23.5Z" fill="#4D4D4D"/>
+                <svg width="366" class="frame-product" height="48" viewBox="0 0 368 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_3_898)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0H360C362.2 0 364 1.8 364 4V40H4V4C4 1.8 5.8 0 8 0ZM20.9288 23.5C22.1792 25.6658 24.4901 27 26.991 27C30.857 27 33.991 23.866 33.991 20C33.991 16.134 30.857 13 26.991 13C24.4901 13 22.1792 14.3342 20.9288 16.5C19.6784 18.6658 19.6784 21.3342 20.9288 23.5ZM50.002 27C47.5011 27 45.1902 25.6658 43.9398 23.5C42.6893 21.3342 42.6893 18.6658 43.9398 16.5C45.1902 14.3342 47.5011 13 50.002 13C53.8679 13 57.002 16.134 57.002 20C57.002 23.866 53.8679 27 50.002 27ZM66.9508 23.5C68.2012 25.6658 70.5121 27 73.0129 27C76.8789 27 80.0129 23.866 80.0129 20C80.0129 16.134 76.8789 13 73.0129 13C70.5121 13 68.2012 14.3342 66.9508 16.5C65.7003 18.6658 65.7003 21.3342 66.9508 23.5Z" fill="#4D4D4D"/>
                   </g>
                   <defs>
-                  <filter id="filter0_d_3_841" x="0" y="0" width="368" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <filter id="filter0_d_3_898" x="0" y="0" width="368" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                   <feFlood flood-opacity="0" result="BackgroundImageFix"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dy="4"/>
                   <feGaussianBlur stdDeviation="2"/>
                   <feComposite in2="hardAlpha" operator="out"/>
                   <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_841"/>
-                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3_841" result="shape"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_898"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3_898" result="shape"/>
+                  </filter>
+                  </defs>
+                  </svg>
+                  <img  class="photo-site" src="img/1sedona.jpg" alt="скрин седона">
+                <article class="pop-up-product" >
+                  <h3>Sedona</h3>
+                  <p>Информационный сайт<br> для туристов</p>
+                    <a class="button product-price-button" href="#">9 000р</a>
+                </article> 
+              </li>
+              <li class="product-list-item">
+                <svg width="366" class="frame-product" height="48" viewBox="0 0 368 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_3_898)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0H360C362.2 0 364 1.8 364 4V40H4V4C4 1.8 5.8 0 8 0ZM20.9288 23.5C22.1792 25.6658 24.4901 27 26.991 27C30.857 27 33.991 23.866 33.991 20C33.991 16.134 30.857 13 26.991 13C24.4901 13 22.1792 14.3342 20.9288 16.5C19.6784 18.6658 19.6784 21.3342 20.9288 23.5ZM50.002 27C47.5011 27 45.1902 25.6658 43.9398 23.5C42.6893 21.3342 42.6893 18.6658 43.9398 16.5C45.1902 14.3342 47.5011 13 50.002 13C53.8679 13 57.002 16.134 57.002 20C57.002 23.866 53.8679 27 50.002 27ZM66.9508 23.5C68.2012 25.6658 70.5121 27 73.0129 27C76.8789 27 80.0129 23.866 80.0129 20C80.0129 16.134 76.8789 13 73.0129 13C70.5121 13 68.2012 14.3342 66.9508 16.5C65.7003 18.6658 65.7003 21.3342 66.9508 23.5Z" fill="#4D4D4D"/>
+                  </g>
+                  <defs>
+                  <filter id="filter0_d_3_898" x="0" y="0" width="368" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feOffset dy="4"/>
+                  <feGaussianBlur stdDeviation="2"/>
+                  <feComposite in2="hardAlpha" operator="out"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_898"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3_898" result="shape"/>
                   </filter>
                   </defs>
                   </svg>
                   
-                  <img  src="img/1sedona.jpg" alt="скрин седона">
-                   <h3>Sedona</h3>
-                   <p>Информационный сайт для туристов</p>
-                    <a class="button product-price-button" href="#">9 000р</a>
+                  <img class="photo-site"src="img/2pink.jpg" alt="скрин пинк">
+                  <article class="pop-up-product" ><h3>Pink App</h3>
+                  <p>Продуктовый лендинг<br> приложения для iOS и Android</p>
+                  <a class="button product-price-button" href="#">9 000р</a>
+                </article>
               </li>
-              <li>
-                <svg class="frame-product" width="368" height="48" viewBox="0 0 368 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g opacity="0.12" filter="url(#filter0_d_3_841)">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0H360C362.2 0 364 1.8 364 4V40H4V4C4 1.8 5.8 0 8 0ZM20.9288 23.5C22.1793 25.6658 24.4901 27 26.991 27C30.857 27 33.991 23.866 33.991 20C33.991 16.134 30.857 13 26.991 13C24.4901 13 22.1793 14.3342 20.9288 16.5C19.6784 18.6658 19.6784 21.3342 20.9288 23.5ZM50.002 27C47.5011 27 45.1903 25.6658 43.9398 23.5C42.6894 21.3342 42.6894 18.6658 43.9398 16.5C45.1903 14.3342 47.5011 13 50.002 13C53.868 13 57.002 16.134 57.002 20C57.002 23.866 53.868 27 50.002 27ZM66.9508 23.5C68.2013 25.6658 70.5121 27 73.013 27C76.879 27 80.013 23.866 80.013 20C80.013 16.134 76.879 13 73.013 13C70.5121 13 68.2013 14.3342 66.9508 16.5C65.7004 18.6658 65.7004 21.3342 66.9508 23.5Z" fill="#4D4D4D"/>
+              <li class="product-list-item">
+                <svg width="366" class="frame-product" height="48" viewBox="0 0 368 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_3_898)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0H360C362.2 0 364 1.8 364 4V40H4V4C4 1.8 5.8 0 8 0ZM20.9288 23.5C22.1792 25.6658 24.4901 27 26.991 27C30.857 27 33.991 23.866 33.991 20C33.991 16.134 30.857 13 26.991 13C24.4901 13 22.1792 14.3342 20.9288 16.5C19.6784 18.6658 19.6784 21.3342 20.9288 23.5ZM50.002 27C47.5011 27 45.1902 25.6658 43.9398 23.5C42.6893 21.3342 42.6893 18.6658 43.9398 16.5C45.1902 14.3342 47.5011 13 50.002 13C53.8679 13 57.002 16.134 57.002 20C57.002 23.866 53.8679 27 50.002 27ZM66.9508 23.5C68.2012 25.6658 70.5121 27 73.0129 27C76.8789 27 80.0129 23.866 80.0129 20C80.0129 16.134 76.8789 13 73.0129 13C70.5121 13 68.2012 14.3342 66.9508 16.5C65.7003 18.6658 65.7003 21.3342 66.9508 23.5Z" fill="#4D4D4D"/>
                   </g>
                   <defs>
-                  <filter id="filter0_d_3_841" x="0" y="0" width="368" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <filter id="filter0_d_3_898" x="0" y="0" width="368" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                   <feFlood flood-opacity="0" result="BackgroundImageFix"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dy="4"/>
                   <feGaussianBlur stdDeviation="2"/>
                   <feComposite in2="hardAlpha" operator="out"/>
                   <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_841"/>
-                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3_841" result="shape"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_898"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3_898" result="shape"/>
                   </filter>
                   </defs>
                   </svg>
-                  <img src="img/2pink.jpg" alt="скрин пинк">
-                  <h3>Pink App</h3>
-                  <p>Продуктовый лендингприложения для iOS и Android</p>
+                  <img class="photo-site"src="img/3borodinskii.jpg" alt="скрин бородинский">
+                  <article class="pop-up-product" ><h3>Barbershop</h3>
+                  <p>Сайт салона красоты.<br> Для мужчин, да.</p>
                   <a class="button product-price-button" href="#">9 000р</a>
+                </article>
               </li>
-              <li>
-                <svg class="frame-product" width="368" height="48" viewBox="0 0 368 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g opacity="0.12" filter="url(#filter0_d_3_841)">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0H360C362.2 0 364 1.8 364 4V40H4V4C4 1.8 5.8 0 8 0ZM20.9288 23.5C22.1793 25.6658 24.4901 27 26.991 27C30.857 27 33.991 23.866 33.991 20C33.991 16.134 30.857 13 26.991 13C24.4901 13 22.1793 14.3342 20.9288 16.5C19.6784 18.6658 19.6784 21.3342 20.9288 23.5ZM50.002 27C47.5011 27 45.1903 25.6658 43.9398 23.5C42.6894 21.3342 42.6894 18.6658 43.9398 16.5C45.1903 14.3342 47.5011 13 50.002 13C53.868 13 57.002 16.134 57.002 20C57.002 23.866 53.868 27 50.002 27ZM66.9508 23.5C68.2013 25.6658 70.5121 27 73.013 27C76.879 27 80.013 23.866 80.013 20C80.013 16.134 76.879 13 73.013 13C70.5121 13 68.2013 14.3342 66.9508 16.5C65.7004 18.6658 65.7004 21.3342 66.9508 23.5Z" fill="#4D4D4D"/>
+              <li class="product-list-item">
+                <svg width="366" class="frame-product" height="48" viewBox="0 0 368 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_3_898)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0H360C362.2 0 364 1.8 364 4V40H4V4C4 1.8 5.8 0 8 0ZM20.9288 23.5C22.1792 25.6658 24.4901 27 26.991 27C30.857 27 33.991 23.866 33.991 20C33.991 16.134 30.857 13 26.991 13C24.4901 13 22.1792 14.3342 20.9288 16.5C19.6784 18.6658 19.6784 21.3342 20.9288 23.5ZM50.002 27C47.5011 27 45.1902 25.6658 43.9398 23.5C42.6893 21.3342 42.6893 18.6658 43.9398 16.5C45.1902 14.3342 47.5011 13 50.002 13C53.8679 13 57.002 16.134 57.002 20C57.002 23.866 53.8679 27 50.002 27ZM66.9508 23.5C68.2012 25.6658 70.5121 27 73.0129 27C76.8789 27 80.0129 23.866 80.0129 20C80.0129 16.134 76.8789 13 73.0129 13C70.5121 13 68.2012 14.3342 66.9508 16.5C65.7003 18.6658 65.7003 21.3342 66.9508 23.5Z" fill="#4D4D4D"/>
                   </g>
                   <defs>
-                  <filter id="filter0_d_3_841" x="0" y="0" width="368" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <filter id="filter0_d_3_898" x="0" y="0" width="368" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                   <feFlood flood-opacity="0" result="BackgroundImageFix"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dy="4"/>
                   <feGaussianBlur stdDeviation="2"/>
                   <feComposite in2="hardAlpha" operator="out"/>
                   <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_841"/>
-                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3_841" result="shape"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_898"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3_898" result="shape"/>
                   </filter>
                   </defs>
                   </svg>
-                  <img src="img/3borodinskii.jpg" alt="скрин бородинский">
-                  <h3>Barbershop</h3>
-                  <p>Сайт салона красоты.Для мужчин, да.</p>
-                  <a class="button product-price-button" href="#">9 000р</a>
+                  <img class="photo-site"src="img/4mishka.jpg" alt="скрин мишка">
+                  <article class="pop-up-product" ><h3>Mishka</h3>
+                  <p>Интернет-магазин<br> вязаных игрушек</p>
+                  <a class="button product-price-button" href="#">9 000р</a></article>
               </li>
-              <li>
-                <svg class="frame-product" width="368" height="48" viewBox="0 0 368 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g opacity="0.12" filter="url(#filter0_d_3_841)">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0H360C362.2 0 364 1.8 364 4V40H4V4C4 1.8 5.8 0 8 0ZM20.9288 23.5C22.1793 25.6658 24.4901 27 26.991 27C30.857 27 33.991 23.866 33.991 20C33.991 16.134 30.857 13 26.991 13C24.4901 13 22.1793 14.3342 20.9288 16.5C19.6784 18.6658 19.6784 21.3342 20.9288 23.5ZM50.002 27C47.5011 27 45.1903 25.6658 43.9398 23.5C42.6894 21.3342 42.6894 18.6658 43.9398 16.5C45.1903 14.3342 47.5011 13 50.002 13C53.868 13 57.002 16.134 57.002 20C57.002 23.866 53.868 27 50.002 27ZM66.9508 23.5C68.2013 25.6658 70.5121 27 73.013 27C76.879 27 80.013 23.866 80.013 20C80.013 16.134 76.879 13 73.013 13C70.5121 13 68.2013 14.3342 66.9508 16.5C65.7004 18.6658 65.7004 21.3342 66.9508 23.5Z" fill="#4D4D4D"/>
+              <li class="product-list-item">
+                <svg width="366" class="frame-product" height="48" viewBox="0 0 368 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_3_898)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0H360C362.2 0 364 1.8 364 4V40H4V4C4 1.8 5.8 0 8 0ZM20.9288 23.5C22.1792 25.6658 24.4901 27 26.991 27C30.857 27 33.991 23.866 33.991 20C33.991 16.134 30.857 13 26.991 13C24.4901 13 22.1792 14.3342 20.9288 16.5C19.6784 18.6658 19.6784 21.3342 20.9288 23.5ZM50.002 27C47.5011 27 45.1902 25.6658 43.9398 23.5C42.6893 21.3342 42.6893 18.6658 43.9398 16.5C45.1902 14.3342 47.5011 13 50.002 13C53.8679 13 57.002 16.134 57.002 20C57.002 23.866 53.8679 27 50.002 27ZM66.9508 23.5C68.2012 25.6658 70.5121 27 73.0129 27C76.8789 27 80.0129 23.866 80.0129 20C80.0129 16.134 76.8789 13 73.0129 13C70.5121 13 68.2012 14.3342 66.9508 16.5C65.7003 18.6658 65.7003 21.3342 66.9508 23.5Z" fill="#4D4D4D"/>
                   </g>
                   <defs>
-                  <filter id="filter0_d_3_841" x="0" y="0" width="368" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <filter id="filter0_d_3_898" x="0" y="0" width="368" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                   <feFlood flood-opacity="0" result="BackgroundImageFix"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dy="4"/>
                   <feGaussianBlur stdDeviation="2"/>
                   <feComposite in2="hardAlpha" operator="out"/>
                   <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_841"/>
-                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3_841" result="shape"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_898"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3_898" result="shape"/>
                   </filter>
                   </defs>
                   </svg>
-                  <img src="img/4mishka.jpg" alt="скрин мишка">
-                  <h3>Mishka</h3>
-                  <p>Интернет-магазин вязаных игрушек</p>
-                  <a class="button product-price-button" href="#">9 000р</a>
+                  <img class="photo-site"src="img/5aplus.jpg" alt=" скрин аплюс">
+                  <article class="pop-up-product" ><h3>A plus</h3>
+                  <p>Лендинг курсов повышения<br> квалификации</p>
+                  <a class="button product-price-button" href="#">9 000р</a></article>
               </li>
-              <li>
-                <svg class="frame-product" width="368" height="48" viewBox="0 0 368 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g opacity="0.12" filter="url(#filter0_d_3_841)">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0H360C362.2 0 364 1.8 364 4V40H4V4C4 1.8 5.8 0 8 0ZM20.9288 23.5C22.1793 25.6658 24.4901 27 26.991 27C30.857 27 33.991 23.866 33.991 20C33.991 16.134 30.857 13 26.991 13C24.4901 13 22.1793 14.3342 20.9288 16.5C19.6784 18.6658 19.6784 21.3342 20.9288 23.5ZM50.002 27C47.5011 27 45.1903 25.6658 43.9398 23.5C42.6894 21.3342 42.6894 18.6658 43.9398 16.5C45.1903 14.3342 47.5011 13 50.002 13C53.868 13 57.002 16.134 57.002 20C57.002 23.866 53.868 27 50.002 27ZM66.9508 23.5C68.2013 25.6658 70.5121 27 73.013 27C76.879 27 80.013 23.866 80.013 20C80.013 16.134 76.879 13 73.013 13C70.5121 13 68.2013 14.3342 66.9508 16.5C65.7004 18.6658 65.7004 21.3342 66.9508 23.5Z" fill="#4D4D4D"/>
+              <li class="product-list-item">
+                <svg width="366" class="frame-product" height="48" viewBox="0 0 368 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_3_898)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0H360C362.2 0 364 1.8 364 4V40H4V4C4 1.8 5.8 0 8 0ZM20.9288 23.5C22.1792 25.6658 24.4901 27 26.991 27C30.857 27 33.991 23.866 33.991 20C33.991 16.134 30.857 13 26.991 13C24.4901 13 22.1792 14.3342 20.9288 16.5C19.6784 18.6658 19.6784 21.3342 20.9288 23.5ZM50.002 27C47.5011 27 45.1902 25.6658 43.9398 23.5C42.6893 21.3342 42.6893 18.6658 43.9398 16.5C45.1902 14.3342 47.5011 13 50.002 13C53.8679 13 57.002 16.134 57.002 20C57.002 23.866 53.8679 27 50.002 27ZM66.9508 23.5C68.2012 25.6658 70.5121 27 73.0129 27C76.8789 27 80.0129 23.866 80.0129 20C80.0129 16.134 76.8789 13 73.0129 13C70.5121 13 68.2012 14.3342 66.9508 16.5C65.7003 18.6658 65.7003 21.3342 66.9508 23.5Z" fill="#4D4D4D"/>
                   </g>
                   <defs>
-                  <filter id="filter0_d_3_841" x="0" y="0" width="368" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <filter id="filter0_d_3_898" x="0" y="0" width="368" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                   <feFlood flood-opacity="0" result="BackgroundImageFix"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dy="4"/>
                   <feGaussianBlur stdDeviation="2"/>
                   <feComposite in2="hardAlpha" operator="out"/>
                   <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_841"/>
-                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3_841" result="shape"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_898"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3_898" result="shape"/>
                   </filter>
                   </defs>
                   </svg>
-                  <img src="img/5aplus.jpg" alt=" скрин аплюс">
-                  <h3>A plus</h3>
-                  <p>Лендинг курсов повышения квалификации</p>
-                  <a class="button product-price-button" href="#">9 000р</a>
-              </li>
-              <li>
-                <svg class="frame-product" width="368" height="48" viewBox="0 0 368 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g opacity="0.12" filter="url(#filter0_d_3_841)">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0H360C362.2 0 364 1.8 364 4V40H4V4C4 1.8 5.8 0 8 0ZM20.9288 23.5C22.1793 25.6658 24.4901 27 26.991 27C30.857 27 33.991 23.866 33.991 20C33.991 16.134 30.857 13 26.991 13C24.4901 13 22.1793 14.3342 20.9288 16.5C19.6784 18.6658 19.6784 21.3342 20.9288 23.5ZM50.002 27C47.5011 27 45.1903 25.6658 43.9398 23.5C42.6894 21.3342 42.6894 18.6658 43.9398 16.5C45.1903 14.3342 47.5011 13 50.002 13C53.868 13 57.002 16.134 57.002 20C57.002 23.866 53.868 27 50.002 27ZM66.9508 23.5C68.2013 25.6658 70.5121 27 73.013 27C76.879 27 80.013 23.866 80.013 20C80.013 16.134 76.879 13 73.013 13C70.5121 13 68.2013 14.3342 66.9508 16.5C65.7004 18.6658 65.7004 21.3342 66.9508 23.5Z" fill="#4D4D4D"/>
-                  </g>
-                  <defs>
-                  <filter id="filter0_d_3_841" x="0" y="0" width="368" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                  <feOffset dy="4"/>
-                  <feGaussianBlur stdDeviation="2"/>
-                  <feComposite in2="hardAlpha" operator="out"/>
-                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_841"/>
-                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3_841" result="shape"/>
-                  </filter>
-                  </defs>
-                  </svg>
-                  <img src="img/6kvas.jpg" alt=" скрин квас">
-                  <h3>Kbact</h3>
-                  <p>Промо-сайт производителякрафтового кваса</p>
-                  <a class="button product-price-button" href="#">9 000р</a>
+                  <img class="photo-site" src="img/6kvas.jpg" alt=" скрин квас">
+                  <article class="pop-up-product" ><h3>Kbact</h3>
+                  <p>Промо-сайт производителя<br> крафтового кваса</p>
+                  <a class="button product-price-button" href="#">9 000р</a></article>
               </li>
           </ul>
-          <ul>
-              <li><a>1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a class="button button-next" href="#">следующая</a></li>
+          <ul class="list-button-page">
+              <li class="list-button-item" ><a class="page-button page-button-active" >1</a></li>
+              <li class="list-button-item"><a class=" page-button" href="#">2</a></li>
+              <li class="list-button-item"> <a class=" page-button" href="#">3</a></li>
+              <li class="list-button-item"> <a class=" button-next page-button" href="#">следующая</a></li>
           </ul>
       </section>
     </main>
+  </div>
 
     <footer class="main-footer">
-      <section class="contacts">
-    <h2>Контакты</h2>
-      <p class="footer-heading">NЁRDS DESIGN STUDIO</p>
-      <p>191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8 <br>тел. <a class="contacts-phone" href="tel: +78122757575">+7 (812) 275-75-75</a></p>
-      <button class="button button-contacts" href="#">Напишите нам</button>
+          
+      
+        <section class="contacts">
+          
+          
+          <div class="contact-list">          
+          <p class="footer-heading">NЁRDS DESIGN STUDIO</p>
+          <p>191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8 <br> тел. <a class="contacts-phone" href="tel: +78122757575">+7 (812) 275-75-75</a></p>
+          <a class="button button-contacts modal-button" href="/blank.html">Напишите нам</a>
+        </div>
+        
+        </div>
+        <section class="feedback-modal visually-hidden">
+          <h2>Напишите нам</h2>
+          <div class="1">
+          <label for="feedback-modal-name">Ваше имя:</label>
+          <input type="text" name="name" id="feedback-modal-name" placeholder="Имя Фамилия">
+        </div>
+        <div class="12">
+          <label for="feedback-modal-email">Ваш email:</label>
+          <input type="email" name="mail" id="feedback-modal-email" placeholder="email@example.com">
+        </div>
+        <div class="fedback-text">
+          <label for="feedback-modal-text">Текст письма:</label>
+          <textarea placeholder="В свободной форме" name="text-form" id="feedback-modal-text" cols="30" rows="10"></textarea>
+        </div>
+          <button class="button button-Feedback " >Отправить</button>
+          <button class="modal-close"></button>
+           </section>
+        </section>
+
+        
+        <section class="footer-map">
+        <img src="img/map 1.jpg" alt="большая карта">  
+        </section> 
+      
+
+    <div class="container">
+      <section class="social-footer">
+        <ul class="social-button" >
+        <li><a href="htmlacademy.ru"><svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.138 11.51C17.094 11.201 18.318 13.55 19.621 14.449C20.599 15.13 21.348 14.983 21.348 14.983L24.821 14.933C24.821 14.933 26.636 14.821 25.778 13.379C25.707 13.259 25.275 12.31 23.193 10.357C21.016 8.31404 21.311 8.64504 23.932 5.11304C25.529 2.96004 26.168 1.64504 25.968 1.08504C25.776 0.546037 24.603 0.686037 24.603 0.686037L20.69 0.713037C20.309 0.714037 19.986 0.832037 19.839 1.22804C19.836 1.23204 19.218 2.89404 18.394 4.30704C16.653 7.29604 15.958 7.45504 15.67 7.26804C15.009 6.83504 15.176 5.53104 15.176 4.60404C15.176 1.70704 15.608 0.499037 14.33 0.187037C13.903 0.0830374 13.591 0.0150374 12.502 0.00503741C11.11 -0.0159626 9.92797 0.00503743 9.25797 0.334037C8.81297 0.557037 8.47197 1.04604 8.67897 1.07404C8.93897 1.10904 9.52197 1.23404 9.83397 1.66004C10.235 2.21204 10.223 3.44904 10.223 3.44904C10.223 3.44904 10.452 6.86004 9.68297 7.28304C9.15497 7.57304 8.43297 6.98104 6.87997 4.26704C6.08697 2.87904 5.48797 1.34504 5.48797 1.34504C5.48797 1.34504 5.37197 1.06004 5.16197 0.904037C4.91197 0.719037 4.56197 0.660037 4.56197 0.660037L0.84797 0.684037C0.84797 0.684037 0.28997 0.700037 0.0849697 0.946037C-0.0970303 1.16404 0.0699697 1.61404 0.0699697 1.61404C0.0699697 1.61404 2.97897 8.49504 6.27297 11.961C9.29297 15.143 12.725 14.932 12.725 14.932H14.28C14.28 14.932 14.749 14.878 14.989 14.62C15.213 14.38 15.203 13.929 15.203 13.929C15.203 13.929 15.172 11.82 16.138 11.51Z" fill="white"/>
+          </svg>
+          </a></li>
+        <li><a href="htmlacademy.ru"><svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
+          </svg>
+          </a></li>
+        <li><a href="htmlacademy.ru"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H18C19.65 0 21 1.35 21 3V18C21 19.65 19.65 21 18 21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5 7C8.57 7 7 8.57 7 10.5C7 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3 18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 14.0899 6.91015 17 10.5 17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819 9H18V18H3ZM14 7H18V3H14V7Z" fill="white"/>
+          </svg></a></li>
+        </ul>
+
+        <p>
+          <span class="bold lets-friends"> Давайте дружить, это выгодно</span> <br>
+          Скидка 10% для друзей из социальных сетей.
+        </p>
       </section>
-
-    <section class="footer-map">
-      <img src="img/map 1.jpg" alt="большая карта">  
-    </section> 
-
-  
-    <ul class="social-button" >
-      <li><a href="htmlacademy.ru"><img class="social" src="img/vk-icon.svg" alt="иконка вк"></img></a></li>
-      <li><a href="htmlacademy.ru"><img class="social" src="img/fb-icon.svg" alt="иконка фейсбук"></a></li>
-      <li><a href="htmlacademy.ru"><img class="social" src="img/insta-icon.svg" alt="иконка инстаграм"></a></li>
-    </ul>
-
-    <p><span class="bold lets-friends"> Давайте дружить, это выгодно</span> <br>
-    Скидка 10% для друзей из социальных сетей.</p>
-  </footer>
-  <section>
- <h2>обратная связь</h2>
-
- <input type="text" placeholder="Имя Фамилия">
- <input type="email" placeholder="email@example.com">
- <p>Текст письма</p>
- <textarea placeholder="В свободной форме" name="" id="" cols="30" rows="10"></textarea>
- <button class="button button-Feedback" >Отправить</button>
-  </section>
+      </div>
+    </footer>
+<script src="js/Feedback.js"></script>
 </form>
+
   </body>
 </html>

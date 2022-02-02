@@ -1,0 +1,258 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --grey: #eeeeee;
+  --cian-rest: #81b3d2;
+  --cian-aiming: #669ec0;
+  --cian-pushed: #5496bd;
+  --brown-chosen: #766357;
+  --brown-aiming: #604e43;
+  --brown-pushed: #503e33;
+  --grey-rest: #f2f2f2;
+  --grey-aiming: #ebebeb;
+  --grey-calendar: #a9a9a9;
+  --grey-html-logo-pushed: #bdbbbc;
+}
+/* global */
+
+.page {
+  height: 100%;
+}
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0 auto 0 auto;
+  padding: 0;
+  color: var(--black);
+  text-transform: uppercase;
+}
+a {
+  text-decoration: none;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-body {
+  min-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  align-content: start;
+}
+
+/* navigation */
+
+.mni {
+  list-style: none;
+}
+
+.main-nav-list a {
+  color: var(--black);
+  font-weight: 700;
+}
+
+.main-nav-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  width: 1200px;
+  height: 56px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+.ll {
+  text-align: left;
+  grid-column: 1/2;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 72px;
+}
+.l {
+  text-align: left;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 90px;
+  grid-column: 2/3;
+}
+
+.r {
+  text-align: right;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 99px;
+  grid-column: 4/5;
+}
+.rr {
+  text-align: right;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 72px;
+  grid-column: 5/6;
+}
+.logo-sedona {
+  grid-column: 3/4;
+  text-align: center;
+  z-index: 5;
+}
+
+/* causes */
+
+.container {
+  width: 1200;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.bacground-shape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shape {
+  position: relative;
+  top: -57px;
+}
+.welcom-text {
+  position: absolute;
+  padding-top: 77.35px;
+}
+.greatnes {
+  width: 1200px;
+  height: 509px;
+}
+
+.causes {
+  display: flex;
+  width: 1200px;
+  height: 256px;
+}
+
+.causes h2 {
+  font-size: 21px;
+  line-height: 26px;
+  margin: 0 auto;
+}
+.causes p {
+  line-height: 26px;
+  margin: 0 auto;
+}
+
+.sedona-reasone-header {
+  padding-top: 41.5px;
+  width: 1200px;
+  height: 216px;
+  text-align: center;
+}
+
+.sedona-reasone-header h2 {
+  padding-bottom: 16.5px;
+}
+.reasone-1 {
+  width: 400px;
+  height: 256px;
+  background: var(--cian-rest);
+  color: var(--white);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.reasone-2 {
+  width: 400px;
+  height: 256px;
+  background: var(--cian-rest);
+  color: var(--white);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.causes-2 {
+  display: flex;
+  width: 1200px;
+  height: 256px;
+}
+.reasone-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.reasone-list h3 {
+  font-size: 21px;
+}
+.reasone-3-4-5 {
+  width: 1200px;
+  height: 256px;
+  background: var(--grey);
+}
+
+.advice {
+  width: 1200px;
+  height: 329px;
+}
+
+.advice-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding-top: 60px;
+  list-style: none;
+}
+
+.introsting-section {
+  width: 568px;
+  height: 233px;
+  margin: 58px 317px 0 315px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.introsting-section h2 {
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.serch-button {
+  display: inline-block;
+  width: 568px;
+  height: 86px;
+  font-size: 21px;
+  line-height: 26px;
+  background: var(--brown-chosen);
+  color: var(--white);
+  border: none;
+}
+
+.map {
+  width: 1200px;
+  height: auto;
+}
+/*  footer  */
+
+.main-footer {
+  display: flex;
+  justify-content: space-around;
+  width: 1200px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+  top: -120px;
+  margin-left: 0 auto;
+}
+
+.modal-reservation {
+  display: none;
+}

@@ -805,8 +805,6 @@ ul {
   background-color: grey;
 }
 
-
-
 .feedback-modal {
   grid-template-columns: 1fr 1fr;
   flex-wrap: wrap;
@@ -864,8 +862,6 @@ ul {
   left: 0;
   right: 0;
 }
-
-
 
 .qwertyu123 {
   padding: 12px;

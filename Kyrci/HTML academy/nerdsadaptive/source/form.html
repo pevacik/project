@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>sedona form</title>
+  </head>
+  <body class="main-body">
+    <header class="main-hedder">
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-list-item">Главная</a></li>
+          <li><a class="main-nav-list-item" href="#">Фото и Видео</a></li>
+          <li><a class="main-nav-list-item" href="#">Форма Отзыва</a></li>
+          <li><a class="main-nav-list-item" href="#">Html academy</a></li>
+        </ul>
+        <a class="nav-logo" href=""
+          ><img src="" alt="" />здесь лого треугольник</a
+        >
+        <button class="toggle-button">бургер переключатель</button>
+      </nav>
+      <section class="main-wallpaper">тут большая картника с надписями</section>
+    </header>
+    <main class="main-page">
+      <section class="fedback-note">
+        <h2>Оставте свой Отзыв</h2>
+        <p>
+          Помогите нашим отелям стать лучше! Оставте отзыв о них, а так же о
+          посещенных вами достопремечательностях
+        </p>
+      </section>
+      <section class="fedback-person">
+        <h2>Представтесь</h2>
+        <ul class="fedback-person-list">
+          <li class="fedback-person-list-item">
+            <label for="name-fedback">
+              Имя: <input type="text" id="name-fedback" placeholder="Петр"
+            /></label>
+          </li>
+          <li>
+            <label for="second-name-fedback">
+              Фамилия:
+              <input type="text" id="second-name-fedback" placeholder="Иванов"
+            /></label>
+          </li>
+          <li>
+            <label for="father-name-fedback">
+              Отчество:
+              <input
+                type="text"
+                id="father-name-fedback"
+                placeholder="Александрович"
+            /></label>
+          </li>
+        </ul>
+      </section>
+      <section class="contact-information">
+        <h2>Контактная информация</h2>
+        <ul class="contact-information-list">
+          <li class="contact-information-list-item">
+            <label for="contact-phone">Контактный телефон</label>
+            <input
+              type="phone"
+              name="contact-phone"
+              id="contact-phone"
+              placeholder="введите ваш телефон"
+            />
+          </li>
+          <li class="contact-information-list-item">
+            <label for="contacts-email">Электронная почта</label>
+            <input
+              type="text"
+              name="contacts-email"
+              id="contacts-email"
+              placeholder="введите ваш e-mail"
+            />
+          </li>
+        </ul>
+      </section>
+      <section class="impression">
+        <ul class="impression-list">
+          <li class="impression-list-item">
+            <input type="radio" name="impression-input" id="good-felings" />
+            <label for="good-felings"> Скорее положительное</label>
+          </li>
+          <li class="impression-list-item">
+            <input type="radio" name="impression-input" id="bad-felings" />
+            <label for="bad-felings"> Скорее отрицательное</label>
+          </li>
+          <li class="impression-list-item">
+            <input
+              type="radio"
+              name="impression-input"
+              id="difficult-felings"
+            />
+            <label for="difficult-felings"> Затрудняюсь ответить</label>
+          </li>
+        </ul>
+      </section>
+      <section class="vizit-landmark">
+        <h2>Посещенные достопремечательности</h2>
+        <ul class="vizit-landmark-list">
+          <li class="vizit-landmark-list-item">
+            <input type="checkbox" checked id="devil-bridge" />
+            <label for="devil-bridge">Мост Дьявола</label>
+          </li>
+          <li class="vizit-landmark-list-item">
+            <input type="checkbox" checked id="bell-rock" />
+            <label for="bell-rock">Гора-Колокол</label>
+          </li>
+          <li class="vizit-landmark-list-item">
+            <input type="checkbox" checked id="slde-park" />
+            <label for="slide-park">Слайд-Парк</label>
+          </li>
+          <li class="vizit-landmark-list-item">
+            <input type="checkbox" id="red-rocks" />
+            <label for="red-rocks">Красные скалы</label>
+          </li>
+        </ul>
+      </section>
+      <section class="emotions-notes">
+        <h2>Опишите свои эмоции</h2>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Опишите подробно все свои восторги"
+        ></textarea>
+        <button>Отправить отзыв</button>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div>
+        <a href="">визит седона</a>
+      </div>
+      <div class="social-button">
+        <ul class="social-button-list">
+          <li class="social-button-list-item">
+            <a href="">твиттер </a>
+          </li>
+          <li class="social-button-list-item"><a href="">фейсбук</a></li>
+          <li class="social-button-list-item"><a href="">ютуб</a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>разработано</p>
+        <img src="" alt="" />картинка академии
+      </div>
+    </footer>
+  </body>
+</html>

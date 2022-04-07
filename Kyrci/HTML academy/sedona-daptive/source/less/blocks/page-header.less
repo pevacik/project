@@ -1,7 +1,4 @@
-.main-hedder {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
+.main-nav {
 }
 
 .main-nav_list--item {
@@ -13,17 +10,17 @@
   background: @blue-main;
   border-top: 1px solid @black-basick;
   border-bottom: 1px solid @white-basic;
-  display: block;
-  padding-top: 5px;
-}
-
-.curent {
-  color: @main-menu-active;
+  display: flex;
+  align-items: center;
 }
 
 .main-wallpaper {
+  border: 1px solid red;
   position: relative;
   height: 389px;
+}
+.main-wallpaper--rock {
+  height: 100%;
 }
 
 .main-wallpaper--text {
@@ -35,10 +32,9 @@
 .main-wallpaper--frame {
   display: block;
   position: absolute;
-  bottom: -1px;
+  bottom: 0;
 }
 
-
-@media (min-width: @tablet-width) {
-  
+.curent {
+  color: @main-menu-active;
 }

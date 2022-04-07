@@ -1,22 +1,14 @@
 {
-  "name": "{{projectName}}",
-  "private": true,
-  "description": "Личный проект «{{projectTitle}}» от HTML Academy",
-  "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "1.0.0",
-    "stylelint": "13.12.0",
-    "stylelint-config-htmlacademy": "0.1.4"
-  },
+  "name": "pinka-daptive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint .",
-    "test": "npm run editorconfig"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "editorconfig-cli": [
-    "*.json",
-    "source/*.html"
-  ],
-  "engines": {
-    "node": "12.18.2"
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }

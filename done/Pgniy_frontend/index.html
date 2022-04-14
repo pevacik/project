@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Задать вопрос</title>
+  </head>
+  <body class="page_body">
+    <form action="#">
+      <div class="page_body_frame">
+        <ul class="frame_list">
+          <li>
+            <h1 class="frame_title">Задать вопрос</h1>
+          </li>
+          <li>
+            <input
+              class="frame_list-item"
+              type="name"
+              name="name"
+              placeholder="Фамилия Имя Отчество"
+              required
+              pattern="[а-яА-Я\s\-|]+"
+            />
+          </li>
+          <li>
+            <input
+              class="frame_list-item"
+              type="tel"
+              name="phone"
+              placeholder="Телефон *"
+              required
+              pattern="[0-9\-|\s]+"
+            />
+          </li>
+          <li>
+            <input
+              class="frame_list-item"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+          </li>
+          <li>
+            <button class="frame_list-item button">отправить запрос</button>
+          </li>
+        </ul>
+      </div>
+    </form>
+    <script src="js/ajax.js"></script>
+  </body>
+</html>

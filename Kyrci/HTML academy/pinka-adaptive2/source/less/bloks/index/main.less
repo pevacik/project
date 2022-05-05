@@ -95,10 +95,17 @@
   }
 }
 .main__carousel {
+  height: 320px;
+  line-height: 30px;
+  background: white;
   position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
+  &-signature {
+    display: none;
+  }
   &--wrapper {
     position: absolute;
     background-color: white;
@@ -114,6 +121,12 @@
 }
 
 .main__table {
+  padding-top: 193px;
+  &--small-header {
+    height: 94px;
+    width: 276px;
+    background: yellow;
+  }
   & .main_table-table {
     display: none;
     border-collapse: collapse;

@@ -1,0 +1,270 @@
+.heading-wraper {
+  text-align: center;
+}
+
+.main_heading {
+  font-size: 24px;
+  line-height: 32px;
+  color: #000;
+  margin: 24px 0;
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 55px;
+    font-weight: 500;
+    padding: 27px 0 26px 0;
+    margin: 0;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 239px 0 33px 0;
+  }
+}
+
+.main_wrapper {
+  padding: 0 21px;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 34px;
+  }
+}
+.hotel_lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.hotel_lists--main_luxury {
+  width: 288px;
+  height: 347px;
+  background: linear-gradient(180deg, rgba(10, 34, 64, 0.1) 0%, #0a2240 100%),
+    url("../../img/main_luxury-desktop.jpg") no-repeat;
+  border-radius: 14px;
+  padding: 0 21px;
+  margin-bottom: 32px;
+  @media (min-width: @tablet-width) {
+    width: 336px;
+    height: 420px;
+    padding: 0 29px;
+    margin-right: 28px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 372px;
+    height: 372px;
+  }
+}
+.main_luxury--heading {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  padding: 77px 0 10px 0;
+  margin: 0;
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 94px 0 9px 0;
+    word-wrap: break-word;
+  }
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 167px 0 9px 0;
+  }
+}
+.main_luxury--text {
+  font-size: 14px;
+  line-height: 21px;
+  padding-bottom: 21px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.main_luxury--price {
+  padding: 18px 0 16px 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &__roboto-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    line-height: 24px;
+    @media (min-width: @tablet-width) {
+      font-size: 19px;
+    }
+  }
+  &__roboto-number {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+    color: @primary_2;
+    @media (min-width: @tablet-width) {
+      font-size: 24px;
+    }
+  }
+}
+
+.hotel_lists--duplex {
+  width: 288px;
+  height: 347px;
+  background: linear-gradient(180deg, rgba(10, 34, 64, 0.1) 0%, #0a2240 100%),
+    url("../../img/duplex-desktop.jpg") no-repeat;
+  border-radius: 14px;
+  padding: 0 21px;
+  margin-bottom: 32px;
+  @media (min-width: @tablet-width) {
+    width: 336px;
+    height: 420px;
+    padding: 0 29px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 372px;
+    height: 372px;
+  }
+}
+
+.duplex-heading {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  padding: 98px 0 10px 0;
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 150px 0 9px;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 167px 0 9px 0;
+  }
+}
+
+.duplex-text {
+  font-size: 14px;
+  line-height: 21px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 21px;
+  }
+}
+
+.duplex-price {
+  padding: 18px 0 16px 0;
+  font-weight: 700;
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &__roboto-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    line-height: 24px;
+    @media (min-width: @tablet-width) {
+      font-size: 19px;
+    }
+  }
+  &__roboto-number {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+    color: @primary_2;
+    @media (min-width: @tablet-width) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}
+
+.hotel_lists--buisnes_luxury {
+  width: 288px;
+  height: 347px;
+  background: linear-gradient(180deg, rgba(10, 34, 64, 0.1) 0%, #0a2240 100%),
+    url("../../img/buisnes_luxury-desktop.jpg") no-repeat;
+  border-radius: 14px;
+  padding: 0 21px;
+  margin-bottom: 32px;
+  @media (min-width: @tablet-width) {
+    width: 336px;
+    height: 420px;
+    padding: 0 24px;
+    margin-left: 28px;
+
+  }
+  @media (min-width: @desktop-width) {
+    width: 372px;
+    height: 372px;
+  }
+}
+
+.buisnes_luxury--heading {
+  font-size: 20px;
+  line-height: 26px;
+  padding: 77px 0 10px;
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 150px 0 9px 0;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 167px 0 9px 0;
+  }
+}
+
+.buisnes_luxury--text {
+  font-size: 14px;
+  line-height: 21px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  @media (min-width: @tablet-width) {
+    .break_word {
+      display: none;
+    }
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 21px;
+  }
+}
+
+.buisnes_luxury--price {
+  padding: 18px 0 16px 0;
+  font-weight: 700;
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &__roboto-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    line-height: 24px;
+    @media (min-width: @tablet-width) {
+      font-size: 19px;
+    }
+  }
+  &__roboto-number {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+    color: @primary_2;
+    @media (min-width: @tablet-width) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}
+
+.desktop-price-vision {
+  @media (min-width:@desktop-width){
+  display: flex;
+  justify-content: space-between;
+}}

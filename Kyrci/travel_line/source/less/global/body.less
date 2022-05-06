@@ -1,16 +1,28 @@
 .page {
   height: 100%;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  color: @colored-fonts;
 }
 
-.page__body {
-  display: grid;
-  grid-template-rows: max-content 1fr max-content;
+.page_body {
+  // display: grid;
+  // grid-template-rows: max-content 1fr max-content;
+  // grid-template-columns: min-content 1fr min-content;
+  
   min-width: 320px;
   margin: 0;
+  background: linear-gradient(
+      68.56deg,
+      rgba(170, 203, 240, 0.25) 11.33%,
+      rgba(170, 203, 240, 0.75) 64.1%
+    ),
+    url("../../img/Background_tablet.jpg") no-repeat ;
+  background-attachment:fixed;
+
 }
+
 
 a {
   text-decoration: none;
@@ -43,3 +55,10 @@ li {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+h1,h2 {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+

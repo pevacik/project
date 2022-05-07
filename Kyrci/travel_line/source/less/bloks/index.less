@@ -30,7 +30,7 @@
 .hotel_lists {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   @media (min-width: @tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -44,35 +44,38 @@
   background: linear-gradient(180deg, rgba(10, 34, 64, 0.1) 0%, #0a2240 100%),
     url("../../img/main_luxury-desktop.jpg") no-repeat;
   border-radius: 14px;
-  padding: 0 21px;
+  padding: 77px 21px 0 21px;
   margin-bottom: 32px;
+  position: relative;
   @media (min-width: @tablet-width) {
     width: 336px;
     height: 420px;
-    padding: 0 29px;
+    padding: 94px 29px 0 29px;
     margin-right: 28px;
   }
   @media (min-width: @desktop-width) {
     width: 372px;
     height: 372px;
+    padding-top: 167px;
   }
 }
 .main_luxury--heading {
+  display: block;
+  color: @colored-fonts;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
-  padding: 77px 0 10px 0;
-  margin: 0;
+  margin: 0 0 10px 0;
   @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 32px;
-    padding: 94px 0 9px 0;
+    margin: 0 0 9px 0;
     word-wrap: break-word;
   }
   @media (min-width: @desktop-width) {
     font-size: 24px;
     line-height: 32px;
-    padding: 167px 0 9px 0;
+    margin: 0 0 9px 0;
   }
 }
 .main_luxury--text {
@@ -119,31 +122,35 @@
   background: linear-gradient(180deg, rgba(10, 34, 64, 0.1) 0%, #0a2240 100%),
     url("../../img/duplex-desktop.jpg") no-repeat;
   border-radius: 14px;
-  padding: 0 21px;
+  padding: 98px 20px 0 20px;
   margin-bottom: 32px;
+  position: relative;
   @media (min-width: @tablet-width) {
     width: 336px;
     height: 420px;
-    padding: 0 29px;
+    padding: 150px 29px 0 29px;
   }
   @media (min-width: @desktop-width) {
     width: 372px;
     height: 372px;
+    padding-top: 167px;
   }
 }
 
 .duplex-heading {
+  display: block;
+  color: @colored-fonts;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
-  padding: 98px 0 10px 0;
+  margin: 0 0 10px 0;
   @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 32px;
-    padding: 150px 0 9px;
+    margin: 0 0 9px;
   }
   @media (min-width: @desktop-width) {
-    padding: 167px 0 9px 0;
+    margin: 0 0 9px 0;
   }
 }
 
@@ -192,32 +199,36 @@
   background: linear-gradient(180deg, rgba(10, 34, 64, 0.1) 0%, #0a2240 100%),
     url("../../img/buisnes_luxury-desktop.jpg") no-repeat;
   border-radius: 14px;
-  padding: 0 21px;
+  padding: 77px 21px;
   margin-bottom: 32px;
+  position: relative;
   @media (min-width: @tablet-width) {
     width: 336px;
     height: 420px;
-    padding: 0 24px;
+    padding: 150px  24px 0 24px;
     margin-left: 28px;
-
   }
   @media (min-width: @desktop-width) {
     width: 372px;
     height: 372px;
+    padding-top: 167px;
   }
 }
 
 .buisnes_luxury--heading {
+  display: block;
+  color: @colored-fonts;
   font-size: 20px;
   line-height: 26px;
-  padding: 77px 0 10px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
   @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 32px;
-    padding: 150px 0 9px 0;
+    margin: 0 0 9px 0;
   }
   @media (min-width: @desktop-width) {
-    padding: 167px 0 9px 0;
+    margin: 0 0 9px 0;
   }
 }
 
@@ -263,8 +274,54 @@
   }
 }
 
+// price section
+
 .desktop-price-vision {
-  @media (min-width:@desktop-width){
-  display: flex;
-  justify-content: space-between;
-}}
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+// reserved
+
+// .hotel_lists--reserved {
+//   opacity: 0.6;
+// }
+
+.wrapper-reservation {
+  display: hide;
+  position: relative;
+}
+
+.desktop-price-vision-reserved {
+  background-color: @secondary;
+  opacity: 2;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  top: 197px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  &__text {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+  }
+  &__paid {
+    color: @primary_2;
+  }
+  @media (min-width: @tablet-width) {
+    top: 258px;
+    width: 336px;
+    height: 161px;
+  }
+  @media (min-width: @desktop-width) {
+    top: 276px;
+    width: 372px;
+    height: 97px;
+  }
+}

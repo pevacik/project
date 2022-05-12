@@ -20,7 +20,7 @@
 }
 
 .main_wrapper {
-  padding: 0 21px;
+  padding: 0 16px;
   align-items: center;
 
   @media (min-width: @tablet-width) {
@@ -134,6 +134,7 @@
     width: 372px;
     height: 372px;
     padding-top: 167px;
+    margin-right: 28px;
   }
 }
 
@@ -205,8 +206,7 @@
   @media (min-width: @tablet-width) {
     width: 336px;
     height: 420px;
-    padding: 150px  24px 0 24px;
-    margin-left: 28px;
+    padding: 150px 24px 0 24px;
   }
   @media (min-width: @desktop-width) {
     width: 372px;
@@ -285,14 +285,16 @@
 
 // reserved
 
-// .hotel_lists--reserved {
-//   opacity: 0.6;
-// }
+.hotel_lists--reserved {
+  opacity: 1;
+}
 
+// обертка для попапа оплаты
 .wrapper-reservation {
-  display: hide;
   position: relative;
 }
+
+// поп ап оплаты
 
 .desktop-price-vision-reserved {
   background-color: @secondary;
@@ -303,7 +305,7 @@
   top: 197px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  display: none;
+  display: none; // заменить на flex
   justify-content: center;
   flex-direction: column;
   &__text {

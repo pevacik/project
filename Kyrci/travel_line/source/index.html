@@ -26,9 +26,8 @@
 
       <div class="hotel_lists">
         <div class="wrapper-reservation ">
-        <div class="hotel_lists--main_luxury hotel_lists--reserved">
+        <div id="main_luxury_js" class="hotel_lists--main_luxury">
           <ul>
-            <!-- <li><h2 class="main_luxury--heading">Представительскй люкс</h2> -->
             <a class="main_luxury--heading" href="#">Представительскй люкс</a></li>
             <li>
               <p class="main_luxury--text">
@@ -42,20 +41,19 @@
               <span class="main_luxury--price__roboto-text">от </span>
               <span class="main_luxury--price__roboto-number"> 7 900 р </span>
             </li>
-            <li><a class="button " href="#">Забранировать</a></li>
+            <li><a class="button button-reservation" href="#">Забранировать</a></li>
           </ul>
-
         </div>
-        <ul class="desktop-price-vision-reserved">
+        <ul class="desktop-price-vision-reserved " id="main_luxury--remove">
           <li>
             <p class="desktop-price-vision-reserved__text">Номер зарезервирован <br>
             Перейти к <a class="desktop-price-vision-reserved__paid" href="#">оплате</a></p>
           </li>
         </ul>
       </div>
-        <div class="hotel_lists--duplex">
+      <div class="wrapper-reservation ">
+        <div id="duplex_js" class="hotel_lists--duplex">
           <ul>
-            <!-- <li><h2 class="duplex-heading">Дуплекс</h2> -->
             <a class="duplex-heading" href="#">Дуплекс</a></li>
             <li>
               <p class="duplex-text">
@@ -68,13 +66,19 @@
               <span class="duplex-price__roboto-text">от</span>
               <span class="duplex-price__roboto-number">5 700 р</span>
             </li>
-            <li><a class="button" href="#">Забранировать</a></li>
+            <li><a class="button button-reservation2" href="#" >Забранировать</a></li>
           </ul>
         </div>
-        <div class="hotel_lists--buisnes_luxury">
-
+        <ul id="duplex--remove" class="desktop-price-vision-reserved">
+          <li>
+            <p class="desktop-price-vision-reserved__text">Номер зарезервирован <br>
+            Перейти к <a class="desktop-price-vision-reserved__paid" href="#">оплате</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="wrapper-reservation ">
+        <div id="buisnes_luxury_js" class="hotel_lists--buisnes_luxury">
           <ul>
-            <!-- <li><h2 class="buisnes_luxury--heading"><a href="">Бизнес-люкс</a> </h2> -->
             <a class="buisnes_luxury--heading" href="#">Бизнес-люкс</a></li>
             <li>
               <p class="buisnes_luxury--text">
@@ -88,11 +92,18 @@
               <span class="buisnes_luxury--price__roboto-text">от</span>
               <span class="buisnes_luxury--price__roboto-number">4 900 р</span>
             </li>
-            <li><a class="button" href="#">Забранировать</a></li>
+            <li><a class="button button-reservation3" href="#">Забранировать</a></li>
           </ul>
         </div>
+        <ul id="buisnes_luxury--remove" class="desktop-price-vision-reserved">
+          <li>
+            <p class="desktop-price-vision-reserved__text">Номер зарезервирован <br>
+            Перейти к <a class="desktop-price-vision-reserved__paid" href="#">оплате</a></p>
+          </li>
+        </ul>
+      </div>
       </div>
     </div>
-
+    <script src="js/reservation.js"></script>
   </body>
 </html>

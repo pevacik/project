@@ -4,10 +4,18 @@
   flex-wrap: wrap;
   align-items: center;
   padding: 38px 0 26px 0;
+  @media (min-width: @tablet-width)  {
+    flex-direction: row;
+    justify-content: space-between;
+    padding:48px 45px ;
+  }
 }
 
 .footer__heading {
-margin-bottom: 33px;
+  margin-bottom: 33px;
+  @media (min-width: @tablet-width)  {
+    padding: 0;
+    margin: 0;}
 }
 
 .footer__social-list {
@@ -16,6 +24,13 @@ margin-bottom: 33px;
   &-item {
     margin-right: 6px;
   }
+  @media (min-width: @tablet-width)  {
+    padding: 0;
+    margin: 0;
+    &-item {
+      margin-right: 6px; 
+    }
+  }
 }
 
 .footter__copyright-list {
@@ -23,4 +38,6 @@ margin-bottom: 33px;
   &-text {
     padding-right: 12px;
   }
-}
+  @media (min-width: @tablet-width)  {
+   align-items: center;
+}}

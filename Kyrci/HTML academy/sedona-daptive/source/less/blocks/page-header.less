@@ -2,16 +2,19 @@
   position: relative;
   display: flex;
   flex-direction: column;
+
   @media (min-width: @tablet-width) {
     padding: 0 34px;
   }
 }
+
 .main_nav--list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   background: @blue-main;
+
   @media (min-width: @tablet-width) {
     background: none;
     flex-direction: row;
@@ -21,9 +24,11 @@
     & &-item:nth-child(1) {
       margin-right: 47px;
     }
+
     &-item:nth-child(2) {
       margin-right: 179px;
     }
+
     &-item:nth-child(3) {
       margin-right: 19px;
     }
@@ -35,14 +40,17 @@
   line-height: 40px;
   height: 55px;
   padding: 10px 0 5px 0;
+
   @media (min-width: @tablet-width) {
     font-size: 14px;
     font-weight: 700;
     line-height: 26px;
   }
 }
+
 .main_nav--list-link {
   color: @white-basic;
+
   @media (min-width: @tablet-width) {
     color: black;
   }
@@ -61,6 +69,7 @@
   flex-direction: column;
   align-items: center;
   z-index: 1;
+
   @media (min-width: @tablet-width) {
     order: 1;
     height: 0;
@@ -74,7 +83,12 @@
   height: 389px;
   background: url("../../img/index/sedona-rocks-mobile.jpg") no-repeat;
   background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    background: url("../../img/index/sedona-rocks-tablet.jpg") no-repeat;
+  }
 }
+
 .page_header--walpaper-list {
   display: flex;
   flex-direction: column;
@@ -86,16 +100,19 @@
   position: absolute;
   bottom: -8px;
   max-width: 100%;
-  & img:nth-child(2){
+
+  & img:nth-child(2) {
     display: none;
   }
+
   @media (min-width: @tablet-width) {
     bottom: 0;
-    & img:nth-child(1){
+
+    & img:nth-child(1) {
       display: none;
     }
-    & img:nth-child(2){
 
+    & img:nth-child(2) {
       display: block;
     }
   }

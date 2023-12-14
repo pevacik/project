@@ -1,0 +1,134 @@
+.page {
+
+    height: 100%;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+
+.links {
+    text-decoration: none;
+    color: orange;
+}
+
+.links:hover {
+    opacity: 0.7;
+}
+
+.links:active {
+    opacity: 0.1;
+}
+
+.headers {
+    padding: 30px auto;
+}
+
+.main {
+    padding: 0 30px;
+    background-color: #1b232e;
+    color: white;
+    height: 446px;
+    width: 1298px;
+    font-size: 46px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+
+}
+
+.main_headers {
+    z-index: 1;
+}
+
+.main_links {
+    font-size: 16px;
+    position: absolute;
+    bottom: 20px;
+    left: 120px;
+
+}
+
+.main_links_item {
+
+    margin-left: 120px;
+
+}
+
+.main_bg {
+    position: absolute;
+    width: 520px;
+    right: 1px;
+}
+
+.discription {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.promotion {
+    font-size: 32px;
+    width: 330px;
+    grid-column: 2/3;
+}
+
+.contextual_advertising {
+    font-size: 32px;
+    width: 330px;
+    grid-column: 3/4;
+}
+
+.social_promotion {
+    font-size: 32px;
+    width: 330px;
+    grid-column: 4/5;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20px 1fr 1fr 1fr 20px;
+    margin-left: 90px;
+}
+
+.table {
+    width: 470px;
+    margin: 0 auto;
+    padding-bottom: 140px;
+    position: relative;
+}
+
+
+
+.table_header {
+    font-weight: 700;
+    text-align: left;
+}
+
+.table_data {
+    font-weight: 400;
+    text-align: left;
+}
+
+.table_signature {
+    text-align: right;
+}
+
+.first_perm::before {
+    content: url('../img/icon/Icon2_blur.svg');
+    position: absolute;
+    left: -60px;
+    top: 50px;
+}
+
+.top_russia::before {
+    content: url('../img/icon/Icon3_blur.svg');
+    position: absolute;
+    left: -60px;
+    top: 100px;
+}
+
+.sertificate::before {
+    content: url('../img/icon/Icon1_blur.svg');
+    position: absolute;
+    left: -55px;
+    top: 150px;
+}

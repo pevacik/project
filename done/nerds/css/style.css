@@ -136,6 +136,7 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  position: relative;
 }
 
 .slide-list h3 {
@@ -176,6 +177,12 @@ ul {
 .slide h3 {
   font-size: 55px;
   line-height: 55px;
+}
+
+.slider-button {
+  position: absolute;
+  display: flex;
+  bottom: 10px;
 }
 
 /*  possibilities  */

@@ -1,0 +1,257 @@
+// perfomance
+
+.performance {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--basic-white);
+  background-color: var(--basic-white);
+  background-image: url(../img/main/mobile-big-cat.jpg);
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+    align-items: flex-start;
+  }
+}
+
+.performance p {
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    color: var(--basic-black);
+
+  }
+
+}
+
+.page-main__title {
+  font-size: 36px;
+  line-height: 36px;
+  margin-top: 27px;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    color: var(--basic-black);
+
+
+  }
+}
+
+// cat-programs
+
+
+.cat-programs {
+  background-color: var(--basic-white);
+  padding-bottom: 27px;
+}
+
+
+
+.cat-program {
+  background-color: var(--basic-grey);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 24px;
+
+  &:first-child {
+    margin-bottom: 20px;
+  }
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+
+
+.cat-programs__title-wrapper {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 22px;
+}
+
+.cat-program__title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 37px;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+.cat-program__text {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--special-grey);
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 23px;
+}
+
+.cat-program__button-wrapper {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 16px;
+  padding-top: 19px;
+  padding-bottom: 22px;
+  border-top: 1px solid var(--grei-line);
+  display: flex;
+  gap: 17px;
+}
+
+
+// how-it-works
+.how-it-works {
+  background-color: var(--basic-white);
+  padding-bottom: 42px;
+}
+
+.how-it-works__title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  margin-bottom: 38px;
+}
+
+.how-it-works__list li {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.how-it-works__list p {
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+
+// example
+
+.example {
+  background-color: var(--another-grey);
+
+}
+
+.example__title {
+  padding-top: 27px;
+  margin-bottom: 33px;
+  font-family: Oswald;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+
+}
+
+.example__text {
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 18px;
+  color: var(--special-grey);
+  margin-bottom: 25px;
+}
+
+.example__plan {
+  display: flex;
+  gap: 31px;
+  justify-content: space-between;
+  margin-bottom: 19px;
+}
+
+.plan__weight,
+.plan__days {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url(../img/main/icon-border.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 124px;
+  height: 56px;
+
+}
+
+
+.plan__title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 5px;
+  margin-top: 24px;
+  text-transform: uppercase;
+}
+
+.plan__text {
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px
+}
+
+.example__text-money {
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.example__button-wrapper {
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 23px;
+  padding-bottom: 25px;
+}
+
+
+// cooperation
+
+.cooperation {
+  background-color: var(--basic-white);
+
+}
+
+.cooperation__container {
+  display: flex;
+  padding: 28px 0;
+}
+
+.cooperation__title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.cooperation__text {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--special-grey);
+}

@@ -1,0 +1,97 @@
+.page {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: "Oswald", "Arial", sans-serif;
+
+  @media (min-width: @tablet-width) {
+    background-color: bisque;
+  }
+}
+
+.page__body {
+  grid-column: 2;
+
+}
+
+p {
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+// .visually-hidden {
+//   position: absolute;
+//   width: 1px;
+//   height: 1px;
+//   margin: -1px;
+//   border: 0;
+//   padding: 0;
+//   white-space: nowrap;
+//   clip-path: inset(100%);
+//   clip: rect(0 0 0 0);
+//   overflow: hidden;
+// }
+
+.center {
+  width: 320px;
+  height: 100%;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 709px;
+
+  }
+}
+
+.padding-box {
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+}
+
+.map-wrapper {
+  margin: 0 auto;
+  width: 320px;
+}

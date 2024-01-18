@@ -9,4 +9,260 @@ p {
     padding: 0;
 }
 
-/* End global================================================================== */
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.page {
+    height: 100%;
+    color: 000;
+    font-family: "Roboto", sans-serif;
+    width: 1220px;
+    margin: 0 auto;
+}
+
+.container-center {
+    padding-left: 55px;
+    padding-right: 54px;
+}
+
+/* header */
+.header {
+    background-color: #007765;
+}
+
+.main-header {
+
+    color: #FFFFFF;
+    height: 84px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-logo {
+    width: 184px;
+    height: 45px;
+}
+
+.main-nav {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    gap: 23px;
+    flex-wrap: wrap;
+}
+
+.main-nav li {
+    position: relative;
+}
+
+.main-nav li::after {
+    content: "I";
+    font-size: 24px;
+    font-weight: 500;
+    position: absolute;
+    right: -14px;
+}
+
+.main-nav li:last-child::after {
+    display: none;
+}
+
+/* main */
+/* PiperNet Is Here */
+.PiperNet-Is-Here {
+    height: 403px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/main-picture.jpg);
+    background-size: cover;
+}
+
+.PiperNet-Is-Here h1 {
+    color: #FFFFFF;
+    font-size: 72px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* Problem */
+
+.problem {
+    padding-top: 48px;
+    padding-bottom: 92px;
+    background-color: #EEE ;
+
+}
+
+.problem h2 {
+    color: #007765;
+
+    text-align: center;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 16px;
+}
+
+.problem p {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.problem span {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.problem__first-paragraph {
+    margin-bottom: 43px;
+}
+
+.problem__second-paragraph {
+    margin-bottom: 49px;
+}
+
+.third__second-paragraph {
+    margin-bottom: 50px;
+}
+
+/* call */
+
+.call {
+    height: 483px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-image: url(../img/neiron.jpg);
+    background-size: cover;
+}
+
+.call h2 {
+    color: #FFF;
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* introducing */
+
+.introducing {
+    position: relative;
+    padding-top: 48px;
+    padding-bottom: 92px;
+}
+
+.introducing h2 {
+    color: #007765;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 16px;
+}
+
+.introducing img {
+    position: absolute;
+    left: 55px;
+}
+
+.introducing p {
+    color: #000;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.introducing__first-paragraph {
+    margin-left: 163px;
+}
+
+.introducing__first-paragraph,
+.introducing__second-paragraph {
+    padding-bottom: 40px;
+}
+
+/* team */
+
+.team {
+    background: #EEE;
+    padding-top: 48px;
+    padding-bottom: 122px;
+}
+
+.team h2 {
+    color: #007765;
+    text-align: center;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 56px;
+}
+
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.team-list li {
+    width: 350px;
+    height: 283px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-list h3 {
+    color: #007765;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.team-list p {
+    color: #000;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* footer */
+
+.main-footer {
+    background-color: #333333;
+
+    padding-top: 48px;
+    padding-bottom: 64px;
+
+}
+
+.main-footer p {
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+}

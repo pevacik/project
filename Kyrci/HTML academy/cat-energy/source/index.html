@@ -14,7 +14,12 @@
     <div class="center header__flex">
       <div class=" logo-flex border-line">
         <a href="#" class="page-header__logo mobile_logo">
-          <img src="img/header/logo-mobile.svg" width="33.32px" height="37.61px;" alt="логотип">
+          <picture>
+            <source media=" (min-width: 1200px)" srcset="img/header/logo-desktop.svg" width="202px" height="59px">
+            <source media="(min-width: 768px)" srcset="img/header/logo-tablet.svg" width="174px" height="51.683px">
+            <img src="img/header/logo-mobile.svg" width="33.32px" height="37.61px" alt="логотип">
+          </picture>
+
         </a>
         <a href="#" class="page-header__logo-text">
           <img src="img/header/logo-text.svg" width="101px" height="18px" alt="логотип текст">
@@ -39,12 +44,15 @@
 
     <div class="center">
       <div class="performance padding-box ">
-        <h1 class="page-main__title">Функциональное
+        <h1 class="page-main__title">Функциональное <br class="break">
           питание для котов</h1>
         <p>Занялся собой? Займись котом!</p>
-        <img src="img/main/package-mobile.png" width="280px" height="270px" alt="продукт">
+        <picture>
+          <source media=" (min-width: 1200px)" srcset="img/main/package-desktop.png" width="552px" height="499px">
+          <source media="(min-width: 768px)" srcset="img/main/package-tablet.png" width="709px" height="609px">
+          <img src="img/main/package-mobile.png" width="280px" height="270px" alt="продукт">
+        </picture>
         <a href="#" class="button performance__button">подобрать программу</a>
-        <!-- <img src="img/main/mobile-big-cat.jpg" width="563px" height="302px" alt=""> -->
       </div>
     </div>
     <section class="cat-programs center">
@@ -53,7 +61,7 @@
 
         <div class="cat-program">
           <div class="cat-programs__title-wrapper">
-            <img src="img/main/slim-cat.svg" width="50px" height="53px" alt="">
+            <img src="img/main/slim-cat.svg" width="50px" height="53px" alt="" class="cat-program__logo">
             <h3 class="cat-program__title">похудение</h3>
           </div>
 
@@ -70,7 +78,7 @@
 
         <div class="cat-program">
           <div class="cat-programs__title-wrapper">
-            <img src="img/main/pro-cat.svg" width="67x" height="50px" alt="">
+            <img src="img/main/pro-cat.svg" width="67x" height="50px" alt="" class="cat-program__logo">
             <h3 class="cat-program__title">набор массы</h3>
           </div>
           <p class="cat-program__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
@@ -110,7 +118,9 @@
             </li>
             <li>
               <img src="img/main/alarm.svg" width="60px" height="60px" alt="">
-              <p>Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+              <p>Уже через месяц наслаждайтесь
+                изменениями к лучшему<br class="tablet--br">
+                вашего питомца!</p>
             </li>
           </ul>
         </div>
@@ -123,21 +133,28 @@
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
             Отличный результат без
             изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+          <div class="example__tablet-wrapper">
+            <div class="example__plan">
+              <div class="plan__weight">
 
-          <div class="example__plan">
-            <div class="plan__weight">
-              <!-- <img class="plan__img" src="img/main/icon-border.svg" width="124px" height="56px" alt=""> -->
-              <h3 class="plan__title">5 кг</h3>
-              <p class="plan__text">снижение <br>веса</p>
+                <h3 class="plan__title">5 кг</h3>
+                <p class="plan__text">снижение <br>веса</p>
+              </div>
+              <div class="plan__days">
+
+                <h3 class="plan__title">60 дней</h3>
+                <p class="plan__text">затрачено<br> времени</p>
+              </div>
             </div>
-            <div class="plan__days">
-              <!-- <img src="img/main/icon-border.svg" width="124px" height="56px" alt=""> -->
-              <h3 class="plan__title">60 дней</h3>
-              <p class="plan__text">затрачено<br> времени</p>
-            </div>
+            <p class="example__text-money">Затраты на питание: <br> 15 000 РУБ. </p>
           </div>
-          <p class="example__text-money">Затраты на питание: 15 000 РУБ. </p>
-          <img src="img/main/before-mobile1.png" width="311px" height="232px" alt="">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/main/before-desktop1.png" width="405px" height="536px" >
+
+            <source media="(min-width: 768px)" srcset="img/main/before-desktop1.png" width="354px" height="620px">
+            <img src="img/main/before-mobile1.png" width="311px" height="232px" alt="" class="example__pic">
+          </picture>
+
           <div class="example__button-wrapper">
             <button class="button example__button">было</button>
             <button class="button example__button">стало</button>

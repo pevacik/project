@@ -5,6 +5,7 @@
   height: 100%;
   font-family: "Oswald", "Arial", sans-serif;
 
+
   @media (min-width: @tablet-width) {
     background-color: bisque;
   }
@@ -73,13 +74,12 @@ ol {
 // }
 
 .center {
-  width: 320px;
+  min-width: 320px;
   height: 100%;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: 709px;
-
+    min-width: @tablet-width;
   }
 }
 
@@ -94,4 +94,9 @@ ol {
 .map-wrapper {
   margin: 0 auto;
   width: 320px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+
+  }
 }

@@ -27,7 +27,7 @@
   display: flex;
   flex-direction: column;
   width: 335px;
-  height: 393px;
+  height: 394px;
   overflow: hidden;
 
   @media (min-width: @desktop-width) {
@@ -107,6 +107,11 @@
   border: 1px solid #3057A2;
 }
 
+.members-about:hover {
+  background-color: #3057A2;
+  color: #FFFFFF;
+}
+
 .button-couresel-container-members {
 
   display: flex;
@@ -129,13 +134,20 @@
   @media (min-width: @desktop-width) {
     position: absolute;
     top: 168px;
-    right: 76px ;
+    right: 79px;
+
+
+
 
     & .button-carusel {
-      width: 44px;
-      height: 44px;
+      display: flex;
+      align-items: center;
       background-repeat: no-repeat;
       background-size: contain;
+      & svg {
+        width: 44px;
+        height: 44px;
+      }
     }
 
   }
@@ -144,6 +156,7 @@
 .members-bulet-container p {
   color: @black-text;
 }
+
 .member-all {
   opacity: 0.6;
 }

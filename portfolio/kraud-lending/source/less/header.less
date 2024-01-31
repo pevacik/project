@@ -110,6 +110,15 @@
   }
 }
 
+.button-support:hover {
+  background-color: #FBCE51;
+  color: #1F1F1F;
+}
+
+.button-support:active {
+  background-color: inherit;
+}
+
 .button-about {
   color: @black-text;
   font-size: 16px;
@@ -121,9 +130,15 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
-
+    background-color: inherit;
+    border: 2px solid #1F1F1F;
 
   }
+}
+
+.button-about:hover {
+  background-color: #1F1F1F;
+  color: #FFFFFF; 
 }
 
 .header-button {
@@ -178,4 +193,3 @@
     }
   }
 }
-

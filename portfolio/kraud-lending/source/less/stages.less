@@ -12,7 +12,7 @@
       width: 74px;
       align-items: center;
       justify-content: space-between;
-      margin:0 16px;
+      margin: 0 16px;
     }
   }
 
@@ -74,7 +74,7 @@
   @media (min-width: @desktop-width) {
     width: 470px;
     height: 265px;
-    top: 430px;
+    top: 490px;
     right: -60px;
     z-index: 1;
   }
@@ -232,11 +232,15 @@
 
 
 .button-carusel {
-  width: 36px;
-  height: 36px;
+
   background: none;
   border: none;
-  background-image: url("../img/carousel-button.svg");
+  display: flex;
+  // background-image: url("../img/carousel-button.svg");
+}
+
+.button-carusel:hover {
+ fill: #FBCE51;
 }
 
 .button-carusel--reverse {

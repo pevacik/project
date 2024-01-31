@@ -1,0 +1,126 @@
+.members {
+  padding-top: 120px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 200px;
+    position: relative;
+  }
+}
+
+
+.members h2 {
+  color: @black-text;
+  font-family: Merriweather;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 39.6px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 54px;
+    line-height: 120%
+  }
+}
+
+.members-list {
+  display: flex;
+  flex-direction: column;
+  width: 335px;
+  height: 393px;
+  overflow: hidden;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 20px;
+    width: 1224.333px;
+    height: 493.486px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+}
+
+.members-active {
+  order: -1;
+}
+
+.members-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 335px;
+  height: 393px;
+  margin-bottom: 40px;
+
+  & img {
+    width: 244px;
+    height: 244px;
+    margin-bottom: 23px;
+  }
+
+  & h3 {
+    color: @black-text;
+    font-family: "Golos Text";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28.8px;
+    margin-bottom: 8px;
+  }
+
+  & p {
+    color: @black-text;
+    font-family: "Golos Text";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    opacity: 0.6;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 394px;
+    height: 482px;
+    margin-bottom: 0;
+
+
+    & img {
+      width: 320px;
+      height: 320px;
+      margin-bottom: 28px;
+    }
+  }
+}
+
+.members-about {
+  color: @blue;
+  font-family: "Golos Text";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19.2px;
+  padding: 12px;
+  border-radius: 62px;
+  border: 1px solid #3057A2;
+}
+
+.button-couresel-container-members {
+  margin-bottom: 100px;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 208px;
+    right: 2px;
+
+    & .button-carusel {
+      width: 44px;
+      height: 44px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+  }
+}

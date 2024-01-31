@@ -1,0 +1,185 @@
+.representation {
+  padding-top: 48px;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 106px;
+  }
+
+}
+
+.representation h2 {
+  color: @black-text;
+  font-family: Merriweather;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 37.8px;
+  text-transform: uppercase;
+  text-align: left;
+
+  @media (min-width: @desktop-width) {
+
+    font-size: 36px;
+    line-height: 135%;
+    width: 764px;
+  }
+}
+
+.representation__title {
+  margin-bottom: 262px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.representation__second-title {
+  margin-bottom: 460px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 92px;
+    margin-top: -48px;
+    text-indent: 162px;
+
+  }
+}
+
+.representation span {
+  color: @red;
+  font-weight: 700;
+}
+
+.representation__img-betwin {
+  position: absolute;
+  top: 220px;
+  left: 12px;
+
+  @media (min-width: @desktop-width) {
+    width: 394px;
+    height: 250px;
+    top: 106px;
+    left: 969px;
+
+  }
+}
+
+.representation__img-bottom {
+  position: absolute;
+  top: 651px;
+  left: -4px;
+
+  @media (min-width: @desktop-width) {
+    top: unset;
+    width: 528.495px;
+    height: 573.976px;
+  }
+}
+
+.representation__text {
+  color: @black-text;
+  font-family: Merriweather;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 37.8px;
+  text-transform: uppercase;
+  margin-top: 20px;
+
+  @media (min-width: @desktop-width) {
+    width: 704px;
+    font-size: 36px;
+    line-height: 135%;
+
+  }
+}
+
+.representation__text__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 415px;
+  }
+}
+
+.representation-table {
+  width: 345.285px;
+  height: 482.705px;
+  position: relative;
+
+  & .table-mobile-title {
+    & p {
+      color: @black-text;
+      font-family: "Golos Text";
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 120%;
+      opacity: 0.7;
+    }
+  }
+
+  & .table-mobile-text {
+    position: absolute;
+    left: 20px;
+    padding-top: 51px;
+    padding-bottom: 10px;
+    width: 335px;
+    border-bottom: 2px solid #D0D0D0;
+
+    & p {
+      color: @black-text;
+      font-family: "Golos Text";
+      font-weight: 600;
+      line-height: 120%;
+    }
+  }
+
+  & .table-signature {
+    color: @blue;
+    font-family: "Golos Text";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 704px;
+    height: 339.162px;
+    position: absolute;
+    right: 20px;
+    top: 620px;
+
+    & p {
+      font-size: 20px;
+      padding: 16px;
+    }
+
+    & p::first-letter {
+      text-transform: uppercase;
+    }
+
+    & .table-mobile-title {
+      border-bottom: 2px solid #D0D0D0;
+
+      & p {
+        padding-left: 0;
+      }
+    }
+
+    & .table-mobile-text {
+      position: unset;
+      padding: 0;
+      width: inherit;
+      border-left: 2px solid #D0D0D0;
+    }
+
+    & .table-mobile-text-last {
+      border-bottom: none;
+    }
+
+    & .table-signature p {
+      padding-top: 48px;
+      padding-left: 0; 
+      font-size: 20px;
+      line-height: 120%;
+    }
+  }
+}

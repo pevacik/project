@@ -1,0 +1,177 @@
+.main-header {
+  padding-top: 18px;
+  background-image: url("../img/header-mobile.png");
+  background-size: cover;
+  background-position: -7px;
+  background-repeat: no-repeat;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 26px;
+    background-image: url("../img/header-desktop.png");
+    background-size: cover;
+    background-position: center;
+
+  }
+}
+
+.main-logo {
+  width: 213px;
+  height: 32px;
+  margin-bottom: 40px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 62px;
+    width: 245.169px;
+    height: 36px;
+  }
+}
+
+.header-container {
+  @media (min-width: @desktop-width) {
+    width: 601px;
+  }
+
+}
+
+
+.main-header h1 {
+  color: @black-text;
+  font-family: Merriweather;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 39.6px;
+  text-transform: uppercase;
+  text-align: left;
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 110%;
+    /* 66px */
+  }
+}
+
+.main-header h2 {
+  color: @black-text;
+  font-family: Merriweather;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 39.6px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 24px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+
+    line-height: 110%;
+    /* 66px */
+
+  }
+}
+
+.header-text {
+  color: @black-text;
+  font-family: "Golos Text";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  margin-bottom: 32px;
+
+  @media (min-width: @desktop-width) {
+    width: 542px;
+    text-align: center;
+  }
+}
+
+.header-button-wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.button-support {
+  color: @white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.8px;
+  background-color: @black-button ;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    height: 72px;
+    width: 263px;
+
+  }
+}
+
+.button-about {
+  color: @black-text;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.8px;
+  background-color: @white;
+  padding: 18px 20px;
+  margin-bottom: 291px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+
+
+  }
+}
+
+.header-button {
+  & br {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 263px;
+    height: 72px;
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+
+    & br {
+      display: unset;
+    }
+  }
+}
+
+.ticker {
+  display: flex;
+  align-items: center;
+  background-color: @red;
+  height: 38px;
+  overflow: hidden;
+  width: 100%;
+
+  & marquee {
+    text-wrap: nowrap;
+    display: inline-block;
+    color: @white;
+    font-family: Merriweather;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 17.6px;
+    text-transform: uppercase;
+
+    & svg {
+      margin-bottom: 3px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 60px;
+
+    & marquee {
+      font-size: 22px;
+      line-height: 110%;
+
+    }
+  }
+}

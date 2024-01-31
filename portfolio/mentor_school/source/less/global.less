@@ -1,0 +1,56 @@
+@desktop-width: 1220px;
+@big-desktop-width: 1920px;
+
+.page {
+  min-width: 360px;
+  margin: 0 auto;
+  font-family: gotham;
+  background-color: bisque;
+
+  @media (min-width: @desktop-width) {
+    min-width: @desktop-width;
+  }
+
+}
+
+.page-body {
+  background-color: aquamarine;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a,
+h1,
+h2,
+h3,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding: 0 20px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    padding: 0;
+    width: @desktop-width;
+  }
+}
+
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+

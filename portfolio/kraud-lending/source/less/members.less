@@ -31,7 +31,7 @@
   overflow: hidden;
 
   @media (min-width: @desktop-width) {
-    margin-left: 20px;
+
     width: 1224.333px;
     height: 493.486px;
     display: flex;
@@ -108,12 +108,28 @@
 }
 
 .button-couresel-container-members {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 100px;
+  margin-top: 40px;
+
+  & .members-bulet-container {
+    color: @black-text;
+    font-family: "Golos Text";
+    font-size: 16px;
+    line-height: 120%;
+    width: 29px;
+    margin: 0 14px;
+
+
+  }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 208px;
-    right: 2px;
+    top: 168px;
+    right: 76px ;
 
     & .button-carusel {
       width: 44px;
@@ -123,4 +139,11 @@
     }
 
   }
+}
+
+.members-bulet-container p {
+  color: @black-text;
+}
+.member-all {
+  opacity: 0.6;
 }

@@ -70,14 +70,14 @@ function addClassToSlides() {
     prevSlides.forEach((slide, index) => {
       setTimeout(() => {
         slide.classList.add('slidevision2');
-        console.log(`Added slidevision2 to ${prevClassName}`);
+        // console.log(`Added slidevision2 to ${prevClassName}`);
       }, index * 10);
     });
 
     const currentSlides = document.querySelectorAll(`.stages-list li.${currentClassName}.slidevision2`);
     currentSlides.forEach(slide => {
       slide.classList.remove('slidevision2');
-      console.log(`Removed slidevision2 from ${currentClassName}`);
+      // console.log(`Removed slidevision2 from ${currentClassName}`);
     });
 
     currentIndex = prevIndex;
@@ -92,7 +92,43 @@ function addClassToSlides() {
   function stopTimer() {
     clearInterval(timer);
   }
+  // -------------------------------------------------------------
+  // булеты
+  document.addEventListener('DOMContentLoaded', function () {
+    const circles = document.querySelectorAll('.bullets-container svg circle');
+    const circlesArray = Array.from(circles);
 
+    console.log('Array of circles:', circlesArray);
+
+    function getCurrentSlide() {
+      const activeSlide = document.querySelector('.stages-list li.slidevision2');
+      if (activeSlide) {
+        const slideIndex = Array.from(activeSlide.classList).find(className => className.startsWith('slidess'));
+        console.log('Current Slide:', slideIndex);
+
+        // Изменяем цвет круга в зависимости от текущего слайда
+        updateBulletColor(slideIndex);
+      } else {
+        console.log('No active slide.');
+      }
+    }
+
+    function updateBulletColor(slideIndex) {
+      circlesArray.forEach((circle, index) => {
+        const circleSlideIndex = index + 1;
+        circle.style.fill = circleSlideIndex === parseInt(slideIndex.slice(-1)) ? '#313131' : '#D9D9D9';
+      });
+    }
+
+    // Вызываем функцию для отслеживания текущего слайда
+    getCurrentSlide();
+
+    // Таймер для обновления цвета булетов
+    setInterval(() => {
+      getCurrentSlide();
+    }, 10); // Измените интервал по необходимости
+  });
+  // ------------------------------------------------------------
   function handleScreenSizeChange(mediaQuery) {
     if (mediaQuery.matches) {
       // Экран больше 700px, включаем карусель
@@ -127,33 +163,80 @@ addClassToSlides();
 
 
 
-
+// карсель участников
 
 document.addEventListener("DOMContentLoaded", function () {
   const slides = document.querySelectorAll('.members-slide');
+  const activSlideElement = document.querySelector('.members-activ-slide');
   let currentIndex = 0;
+  let timer;
+  let visibleSlides = window.innerWidth >= 1300 ? 3 : 1;
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
-      if (i === index) {
+      if (i >= index && i < index + visibleSlides) {
         slide.classList.add('members-active');
       } else {
         slide.classList.remove('members-active');
       }
     });
+    updateActivSlide(index + 1);
   }
 
   function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
+    currentIndex = (currentIndex + 1) % (slides.length - visibleSlides + 1);
     showSlide(currentIndex);
+    restartTimer();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + (slides.length - visibleSlides + 1)) % (slides.length - visibleSlides + 1);
+    showSlide(currentIndex);
+    restartTimer();
   }
 
   function startSlider() {
-    setInterval(() => {
+    timer = setInterval(() => {
       nextSlide();
-    }, 4000); // Интервал в миллисекундах между переключениями
+    }, 4000);
   }
 
-  // Запускаем слайдер при загрузке страницы
+  function restartTimer() {
+    clearInterval(timer);
+    startSlider();
+  }
+
+  function updateActivSlide(index) {
+    activSlideElement.textContent = index;
+  }
+
+  function handleScreenSizeChange(mediaQuery) {
+    if (mediaQuery.matches) {
+      if (visibleSlides !== 3) {
+        visibleSlides = 3;
+        showSlide(currentIndex);
+      }
+    } else {
+      if (visibleSlides !== 1) {
+        visibleSlides = 1;
+        showSlide(currentIndex);
+      }
+    }
+  }
+
+  const mediaQuery = window.matchMedia('(min-width: 1300px)');
+
+  mediaQuery.addListener(handleScreenSizeChange);
+
+  handleScreenSizeChange(mediaQuery);
+
   startSlider();
+
+  document.getElementById('next-slide').addEventListener('click', function () {
+    nextSlide();
+  });
+
+  document.getElementById('prev-slide').addEventListener('click', function () {
+    prevSlide();
+  });
 });

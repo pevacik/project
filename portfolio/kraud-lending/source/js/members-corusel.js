@@ -1,9 +1,9 @@
 
-const slides = document.querySelectorAll('.stages-list li');
-const uniqueClasses = new Set();
+let slides = document.querySelectorAll('.stages-list li');
+let uniqueClasses = new Set();
 
 slides.forEach(slide => {
-  const classes = slide.classList;
+  let classes = slide.classList;
   for (let i = 0; i < classes.length; i++) {
     if (classes[i].startsWith('slidess')) {
       uniqueClasses.add(classes[i]);
@@ -11,11 +11,11 @@ slides.forEach(slide => {
   }
 });
 
-const slideOrder = Array.from(uniqueClasses).sort((a, b) => parseInt(a.slice(-1)) - parseInt(b.slice(-1)));
+let slideOrder = Array.from(uniqueClasses).sort((a, b) => parseInt(a.slice(-1)) - parseInt(b.slice(-1)));
 
 function findSlidesByOrder(order) {
-  const className = slideOrder[order - 1];
-  const foundSlides = document.querySelectorAll(`.stages-list li.${className}`);
+  let className = slideOrder[order - 1];
+  let foundSlides = document.querySelectorAll(`.stages-list li.${className}`);
   return foundSlides;
 }
 
@@ -25,7 +25,7 @@ function addClassToSlides() {
   let isCarouselActive = true; // Флаг для отслеживания состояния карусели
 
   function removeSlidevision2(className) {
-    const previousSlidevision2 = document.querySelectorAll(`.stages-list li.${className}.slidevision2`);
+    let previousSlidevision2 = document.querySelectorAll(`.stages-list li.${className}.slidevision2`);
     previousSlidevision2.forEach(slide => {
       slide.classList.remove('slidevision2');
       console.log(`Removed slidevision2 from ${className}`);
@@ -35,8 +35,8 @@ function addClassToSlides() {
   function processNextSlide() {
     if (!isCarouselActive) return; // Проверяем флаг перед продолжением
 
-    const currentClassName = slideOrder[currentIndex];
-    const foundSlides = document.querySelectorAll(`.stages-list li.${currentClassName}`);
+    let currentClassName = slideOrder[currentIndex];
+    let foundSlides = document.querySelectorAll(`.stages-list li.${currentClassName}`);
 
     foundSlides.forEach((slide, index) => {
       setTimeout(() => {
@@ -45,9 +45,9 @@ function addClassToSlides() {
       }, index * 1);
     });
 
-    const previousIndex = currentIndex === 0 ? slideOrder.length - 1 : currentIndex - 1;
-    const previousClassName = slideOrder[previousIndex];
-    const previousSlides = document.querySelectorAll(`.stages-list li.${previousClassName}.slidevision2`);
+    let previousIndex = currentIndex === 0 ? slideOrder.length - 1 : currentIndex - 1;
+    let previousClassName = slideOrder[previousIndex];
+    let previousSlides = document.querySelectorAll(`.stages-list li.${previousClassName}.slidevision2`);
 
     previousSlides.forEach(previousSlide => {
       previousSlide.classList.remove('slidevision2');
@@ -60,12 +60,12 @@ function addClassToSlides() {
   function processPrevSlide() {
     if (!isCarouselActive) return; // Проверяем флаг перед продолжением
 
-    const currentClassName = slideOrder[currentIndex];
-    const foundSlides = document.querySelectorAll(`.stages-list li.${currentClassName}`);
+    let currentClassName = slideOrder[currentIndex];
+    let foundSlides = document.querySelectorAll(`.stages-list li.${currentClassName}`);
 
-    const prevIndex = (currentIndex - 1 + slideOrder.length) % slideOrder.length;
-    const prevClassName = slideOrder[prevIndex];
-    const prevSlides = document.querySelectorAll(`.stages-list li.${prevClassName}`);
+    let prevIndex = (currentIndex - 1 + slideOrder.length) % slideOrder.length;
+    let prevClassName = slideOrder[prevIndex];
+    let prevSlides = document.querySelectorAll(`.stages-list li.${prevClassName}`);
 
     prevSlides.forEach((slide, index) => {
       setTimeout(() => {
@@ -74,7 +74,7 @@ function addClassToSlides() {
       }, index * 10);
     });
 
-    const currentSlides = document.querySelectorAll(`.stages-list li.${currentClassName}.slidevision2`);
+    let currentSlides = document.querySelectorAll(`.stages-list li.${currentClassName}.slidevision2`);
     currentSlides.forEach(slide => {
       slide.classList.remove('slidevision2');
       // console.log(`Removed slidevision2 from ${currentClassName}`);
@@ -95,15 +95,15 @@ function addClassToSlides() {
   // -------------------------------------------------------------
   // булеты
   document.addEventListener('DOMContentLoaded', function () {
-    const circles = document.querySelectorAll('.bullets-container svg circle');
-    const circlesArray = Array.from(circles);
+    let circles = document.querySelectorAll('.bullets-container svg circle');
+    let circlesArray = Array.from(circles);
 
     console.log('Array of circles:', circlesArray);
 
     function getCurrentSlide() {
-      const activeSlide = document.querySelector('.stages-list li.slidevision2');
+      let activeSlide = document.querySelector('.stages-list li.slidevision2');
       if (activeSlide) {
-        const slideIndex = Array.from(activeSlide.classList).find(className => className.startsWith('slidess'));
+        let slideIndex = Array.from(activeSlide.classList).find(className => className.startsWith('slidess'));
         console.log('Current Slide:', slideIndex);
 
         // Изменяем цвет круга в зависимости от текущего слайда
@@ -115,7 +115,7 @@ function addClassToSlides() {
 
     function updateBulletColor(slideIndex) {
       circlesArray.forEach((circle, index) => {
-        const circleSlideIndex = index + 1;
+        let circleSlideIndex = index + 1;
         circle.style.fill = circleSlideIndex === parseInt(slideIndex.slice(-1)) ? '#313131' : '#D9D9D9';
       });
     }
@@ -142,7 +142,7 @@ function addClassToSlides() {
   }
 
   // Создаем медиа-запрос для отслеживания изменений размера экрана
-  const mediaQuery = window.matchMedia('(max-width: 1360px)');
+  let mediaQuery = window.matchMedia('(max-width: 1360px)');
 
   // Добавляем обработчик изменений размера экрана
   mediaQuery.addListener(handleScreenSizeChange);
@@ -166,8 +166,8 @@ addClassToSlides();
 // карсель участников
 
 document.addEventListener("DOMContentLoaded", function () {
-  const slides = document.querySelectorAll('.members-slide');
-  const activSlideElement = document.querySelector('.members-activ-slide');
+  let slides = document.querySelectorAll('.members-slide');
+  let activSlideElement = document.querySelector('.members-activ-slide');
   let currentIndex = 0;
   let timer;
   let visibleSlides = window.innerWidth >= 1300 ? 3 : 1;
@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  const mediaQuery = window.matchMedia('(min-width: 1300px)');
+  let mediaQuery = window.matchMedia('(min-width: 1300px)');
 
   mediaQuery.addListener(handleScreenSizeChange);
 

@@ -1,0 +1,1039 @@
+<?
+use Bitrix\Main\Page\Asset;
+
+if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+
+$GLOBALS['arrFilterProductOnMain']['SHOW_ON_INDEX_PAGE'] = false;
+
+?><!DOCTYPE html>
+<?if(CModule::IncludeModule("aspro.allcorp2"))
+	$arThemeValues = CAllcorp2::GetFrontParametrsValues(SITE_ID);
+?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=LANGUAGE_ID?>" lang="<?=LANGUAGE_ID?>" class="<?=($_SESSION['SESS_INCLUDE_AREAS'] ? 'bx_editmode ' : '')?><?=strpos( $_SERVER['HTTP_USER_AGENT'], 'MSIE 7.0' ) ? 'ie ie7' : ''?> <?=strpos( $_SERVER['HTTP_USER_AGENT'], 'MSIE 8.0' ) ? 'ie ie8' : ''?> <?=strpos( $_SERVER['HTTP_USER_AGENT'], 'MSIE 7.0' ) ? 'ie ie9' : ''?>">
+	<head>
+		<?global $APPLICATION;?>
+		<?IncludeTemplateLangFile(__FILE__);?>
+		<title><?$APPLICATION->ShowTitle()?></title>
+		<?$APPLICATION->ShowMeta("viewport");?>
+		<?$APPLICATION->ShowMeta("HandheldFriendly");?>
+		<?$APPLICATION->ShowMeta("apple-mobile-web-app-capable", "yes");?>
+		<?$APPLICATION->ShowMeta("apple-mobile-web-app-status-bar-style");?>
+		<?$APPLICATION->ShowMeta("SKYPE_TOOLBAR");?>
+		<?$APPLICATION->ShowHead();?>
+		<?$APPLICATION->AddHeadString('<script>BX.message('.CUtil::PhpToJSObject($MESS, false).')</script>', true);?>
+		<?if(CModule::IncludeModule("aspro.allcorp2")) {CAllcorp2::Start(SITE_ID);}?>
+
+        <?php
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/sourcebuster.min.js');
+        ?>
+        <script>
+            sbjs.init();
+        </script>
+		<meta name="mailru-verification" content="c5aba9f91f360142" />
+		<link rel="manifest" href="/manifest.json">
+        <?php
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/custom_client.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/tiny.css');
+        ?>
+		<?if (false) :?>
+		<!-- Facebook Pixel Code -->
+		<script>
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window, document,'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '486389641914727');
+		fbq('track', 'PageView');
+		</script>
+		<noscript><img height="1" width="1" style="display:none"
+		src="https://www.facebook.com/tr?id=486389641914727&ev=PageView&noscript=1"
+		/></noscript>
+		<!-- End Facebook Pixel Code -->
+		<?endif?>
+<meta name="mailru-verification" content="f2bf387c84848dfa" />
+	</head>
+
+	<?$bIndexBot = (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && strpos($_SERVER['HTTP_USER_AGENT'], 'Lighthouse') !== false); // is indexed yandex/google bot?>
+	<body class="<?=(CModule::IncludeModule("aspro.allcorp2") ? CAllcorp2::getConditionClass() : '');?> mheader-v<?=$arThemeValues["HEADER_MOBILE"];?> footer-v<?=strtolower($arThemeValues['FOOTER_TYPE']);?> fill_bg_<?=strtolower($arThemeValues['SHOW_BG_BLOCK']);?> header-v<?=$arThemeValues["HEADER_TYPE"];?> title-v<?=$arThemeValues["PAGE_TITLE"];?><?=($arThemeValues['ORDER_VIEW'] == 'Y' && $arThemeValues['ORDER_BASKET_VIEW']=='HEADER'? ' with_order' : '')?><?=($arThemeValues['CABINET'] == 'Y' ? ' with_cabinet' : '')?><?=(intval($arThemeValues['HEADER_PHONES']) > 0 ? ' with_phones' : '')?> <?=($bIndexBot ? "wbot" : "");?>">
+        <div class="body_media"></div>
+		<div id="panel"><?$APPLICATION->ShowPanel();?></div>
+
+		<?if(!CModule::IncludeModule("aspro.allcorp2")):?>
+			<?$APPLICATION->SetTitle(GetMessage("ERROR_INCLUDE_MODULE_ALLCORP2_TITLE"));?>
+			<?$APPLICATION->IncludeFile(SITE_DIR."include/error_include_module.php");?>
+			<?die();?>
+		<?endif;?>
+
+		<?$APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"banners_under_header", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "3",
+		"IBLOCK_TYPE" => "aspro_allcorp2_adv",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "20",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Баннер под шапкой",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => array(
+			0 => "TARGET",
+			1 => "HIDDEN_XS",
+			2 => "",
+		),
+		"SET_BROWSER_TITLE" => "Y",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "Y",
+		"SET_META_KEYWORDS" => "Y",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "Y",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPONENT_TEMPLATE" => "banners_under_header"
+	),
+	false
+);?>
+
+		<?CAllcorp2::SetJSOptions();?>
+		<?global $arTheme;?>
+		<?$arTheme = $APPLICATION->IncludeComponent("aspro:theme.allcorp2", "", array(), false);?>
+		<?include_once('defines.php');?>
+
+		<?CAllcorp2::get_banners_position('TOP_HEADER');?>
+
+		<?php if (SITE_ID == 's1') : ?>
+			<?$APPLICATION->IncludeComponent(
+				"bitrix:main.include",
+				".default",
+				array(
+					"COMPONENT_TEMPLATE" => ".default",
+					"AREA_FILE_SHOW" => "file",
+					"PATH" => "/include/banner-top.php",
+					"EDIT_TEMPLATE" => "banner-top.php"
+				),
+				false
+			);?>
+		<?php endif;?>
+
+        <?php if ($USER->IsAdmin() && false):?>
+            <div class="header-top-line" style="background: rgba(0,0,0,1)">
+                <a href="" class="logo-action" title="Институт профессионального кадровика" target="_blank"><img src="/images/logo_white.png" class="logo-action" title="Институт профессионального кадровика" alt="Институт профессионального кадровика"></a>
+                <div class="enter-action">
+                    <i class="svg inline  svg-inline-cabinet" aria-hidden="true" title="Мой кабинет"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <defs>
+                                <style>
+                                    .cls-2 {
+                                        fill: #FFFFFF !important;
+                                        fill-rule: evenodd;
+                                    }
+                                </style>
+                            </defs>
+                            <path class="cls-2" d="M9,18a9,9,0,1,1,9-9A9,9,0,0,1,9,18Zm3.586-3.019a4.086,4.086,0,0,0-7.169,0A6.831,6.831,0,0,0,12.586,14.981ZM9,1.99A6.989,6.989,0,0,0,3.938,13.815a5.969,5.969,0,0,1,10.128-.006A6.989,6.989,0,0,0,9,1.99ZM9.064,10H8.935A2.936,2.936,0,0,1,6,7.064V6.935A2.936,2.936,0,0,1,8.935,4H9.064A2.936,2.936,0,0,1,12,6.935V7.064A2.936,2.936,0,0,1,9.064,10Zm1.217-3.023A1.258,1.258,0,0,0,9.023,5.719H8.977A1.258,1.258,0,0,0,7.719,6.977V7.054A1.258,1.258,0,0,0,8.977,8.312H9.023a1.258,1.258,0,0,0,1.258-1.258V6.977Z"></path>
+                        </svg>
+                    </i>
+                    <a href="http://lk.business-academy.ru" target="_blank" title="Личный кабинет"><?php echo $USER->GetFullName();?></a>
+                </div>
+            </div>
+        <?php endif;?>
+
+        <div class="visible-lg visible-md title-v<?=$arTheme["PAGE_TITLE"]["VALUE"];?><?=($isIndex ? ' index' : '')?>">
+            <?CAllcorp2::ShowPageType('header');?>
+        </div>
+
+		<?CAllcorp2::get_banners_position('TOP_UNDERHEADER');?>
+
+		<?if($arTheme["TOP_MENU_FIXED"]["VALUE"] == 'Y'):?>
+			<div id="headerfixed">
+				<?CAllcorp2::ShowPageType('header_fixed');?>
+			</div>
+		<?endif;?>
+
+		<div id="mobileheader" class="visible-xs visible-sm">
+			<?CAllcorp2::ShowPageType('header_mobile');?>
+			<div id="mobilemenu" class="<?=($arTheme["HEADER_MOBILE_MENU_OPEN"]["VALUE"] == '1' ? 'leftside':'dropdown')?>">
+				<?CAllcorp2::ShowPageType('header_mobile_menu');?>
+			</div>
+		</div>
+
+        <?if($isIndex && SITE_ID == 's1'):?>
+            <div class="main-content">
+                <div class="row">
+                    <div class="maxwidth-theme">
+                        <div class="left-side-slider col-md-8">
+                            <?$APPLICATION->IncludeComponent(
+								"bitrix:news.list",
+								"front-banners-short-slider",
+								array(
+									"IBLOCK_TYPE" => "aspro_allcorp2_adv",
+									"IBLOCK_ID" => "2",
+									"NEWS_COUNT" => "50",
+									"SORT_BY1" => "SORT",
+									"SORT_ORDER1" => "ASC",
+									"SORT_BY2" => "ID",
+									"SORT_ORDER2" => "DESC",
+									"FILTER_NAME" => "arFrontFilter",
+									"FIELD_CODE" => array(
+										0 => "CODE",
+										1 => "NAME",
+										2 => "PREVIEW_TEXT",
+										3 => "PREVIEW_PICTURE",
+										4 => "DETAIL_PICTURE",
+										5 => "",
+									),
+									"PROPERTY_CODE" => array(
+										0 => "BANNERTYPE",
+										1 => "LINKIMG",
+										2 => "BUTTON1TEXT",
+										3 => "",
+									),
+									"CHECK_DATES" => "Y",
+									"DETAIL_URL" => "",
+									"AJAX_MODE" => "N",
+									"AJAX_OPTION_JUMP" => "N",
+									"AJAX_OPTION_STYLE" => "Y",
+									"AJAX_OPTION_HISTORY" => "N",
+									"CACHE_TYPE" => "A",
+									"CACHE_TIME" => "3600000",
+									"CACHE_FILTER" => "Y",
+									"CACHE_GROUPS" => "Y",
+									"PREVIEW_TRUNCATE_LEN" => "",
+									"ACTIVE_DATE_FORMAT" => "j F Y",
+									"SET_TITLE" => "N",
+									"SET_STATUS_404" => "N",
+									"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+									"ADD_SECTIONS_CHAIN" => "N",
+									"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+									"PARENT_SECTION" => "",
+									"PARENT_SECTION_CODE" => "",
+									"INCLUDE_SUBSECTIONS" => "N",
+									"PAGER_TEMPLATE" => "main",
+									"DISPLAY_TOP_PAGER" => "N",
+									"DISPLAY_BOTTOM_PAGER" => "N",
+									"PAGER_TITLE" => "",
+									"PAGER_SHOW_ALWAYS" => "N",
+									"PAGER_DESC_NUMBERING" => "N",
+									"PAGER_DESC_NUMBERING_CACHE_TIME" => "3600000",
+									"PAGER_SHOW_ALL" => "N",
+									"AJAX_OPTION_ADDITIONAL" => "",
+									"SET_BROWSER_TITLE" => "N",
+									"SET_META_KEYWORDS" => "N",
+									"SET_META_DESCRIPTION" => "N",
+									"TITLE" => "Выполненные проекты",
+									"RIGHT_TITLE" => "Все проекты",
+									"RIGHT_LINK" => "projects/",
+									"COMPONENT_TEMPLATE" => "front-banners-short-slider",
+									"SET_LAST_MODIFIED" => "N",
+									"STRICT_SECTION_CHECK" => "N",
+									"SHOW_DETAIL_LINK" => "Y",
+									"PAGER_BASE_LINK_ENABLE" => "N",
+									"SHOW_404" => "N",
+									"MESSAGE_404" => "",
+									"SHOW_DATE" => "N",
+									"COUNT_IN_LINE" => "4",
+									"SHOW_SECTIONS" => "Y",
+									"IMAGE_POSITION" => "left",
+									"USE_SHARE" => "N",
+									"S_ASK_QUESTION" => "",
+									"S_ORDER_SERVICE" => "",
+									"T_GALLERY" => "",
+									"T_DOCS" => "",
+									"T_GOODS" => "",
+									"T_SERVICES" => "",
+									"T_PROJECTS" => "",
+									"T_REVIEWS" => "",
+									"T_STAFF" => "",
+									"IBLOCK_SMALL_BANNERS_TYPE" => "-",
+									"IBLOCK_SMALL_BANNERS_ID" => "",
+									"COMPOSITE_FRAME_MODE" => "A",
+									"COMPOSITE_FRAME_TYPE" => "AUTO"
+								),
+								false
+							);?>
+                        </div>
+                        <div class="right-side-news col-md-4">
+                            <?$APPLICATION->IncludeComponent(
+                                "bitrix:news.list",
+                                "news3_custom",
+                                array(
+                                    "IBLOCK_TYPE" => "aspro_allcorp2_content",
+                                    "IBLOCK_ID" => "28",
+                                    "NEWS_COUNT" => "4",
+                                    "SORT_BY1" => "SORT",
+                                    "SORT_ORDER1" => "ASC",
+                                    "SORT_BY2" => "ID",
+                                    "SORT_ORDER2" => "DESC",
+                                    "FILTER_NAME" => "arFrontFilter",
+                                    "FIELD_CODE" => array(
+                                        0 => "CODE",
+                                        1 => "NAME",
+                                        2 => "PREVIEW_TEXT",
+                                        3 => "PREVIEW_PICTURE",
+                                        4 => "SHOW_COUNTER",
+                                        5 => "DATE_CREATE",
+                                        6 => "",
+                                    ),
+                                    "PROPERTY_CODE" => array(
+                                        0 => "",
+                                        1 => "",
+                                    ),
+                                    "CHECK_DATES" => "Y",
+                                    "DETAIL_URL" => "",
+                                    "AJAX_MODE" => "N",
+                                    "AJAX_OPTION_JUMP" => "N",
+                                    "AJAX_OPTION_STYLE" => "Y",
+                                    "AJAX_OPTION_HISTORY" => "N",
+                                    "CACHE_TYPE" => "N",
+                                    "CACHE_TIME" => "3600000",
+                                    "CACHE_FILTER" => "Y",
+                                    "CACHE_GROUPS" => "N",
+                                    "PREVIEW_TRUNCATE_LEN" => "",
+                                    "ACTIVE_DATE_FORMAT" => "j F Y",
+                                    "SET_TITLE" => "N",
+                                    "SET_STATUS_404" => "N",
+                                    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                                    "ADD_SECTIONS_CHAIN" => "N",
+                                    "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                                    "PARENT_SECTION" => "",
+                                    "PARENT_SECTION_CODE" => "",
+                                    "INCLUDE_SUBSECTIONS" => "N",
+                                    "PAGER_TEMPLATE" => "main",
+                                    "DISPLAY_TOP_PAGER" => "N",
+                                    "DISPLAY_BOTTOM_PAGER" => "N",
+                                    "PAGER_TITLE" => "",
+                                    "PAGER_SHOW_ALWAYS" => "N",
+                                    "PAGER_DESC_NUMBERING" => "N",
+                                    "PAGER_DESC_NUMBERING_CACHE_TIME" => "3600000",
+                                    "PAGER_SHOW_ALL" => "N",
+                                    "AJAX_OPTION_ADDITIONAL" => "",
+                                    "SET_BROWSER_TITLE" => "N",
+                                    "SET_META_KEYWORDS" => "N",
+                                    "SET_META_DESCRIPTION" => "N",
+                                    "TITLE" => "Выполненные проекты",
+                                    "RIGHT_TITLE" => "Все проекты",
+                                    "RIGHT_LINK" => "projects/",
+                                    "COMPONENT_TEMPLATE" => "news3_custom",
+                                    "SET_LAST_MODIFIED" => "N",
+                                    "STRICT_SECTION_CHECK" => "N",
+                                    "SHOW_DETAIL_LINK" => "Y",
+                                    "PAGER_BASE_LINK_ENABLE" => "N",
+                                    "SHOW_404" => "N",
+                                    "MESSAGE_404" => "",
+                                    "SHOW_DATE" => "N",
+                                    "COUNT_IN_LINE" => "4",
+                                    "SHOW_SECTIONS" => "Y",
+                                    "NORMAL_BLOCK" => "Y",
+                                    "ORDER_VIEW" => "\$bOrderViewBasket",
+                                    "HIT_PROP" => "HIT",
+                                    "S_ORDER_PRODUCT" => "",
+                                    "S_MORE_PRODUCT" => "",
+                                    "SHOW_SECTION" => "Y",
+                                    "IMAGE_POSITION" => "left",
+                                    "USE_SHARE" => "N",
+                                    "S_ASK_QUESTION" => "",
+                                    "S_ORDER_SERVICE" => "",
+                                    "T_GALLERY" => "",
+                                    "T_DOCS" => "",
+                                    "T_GOODS" => "",
+                                    "T_SERVICES" => "",
+                                    "T_PROJECTS" => "",
+                                    "T_REVIEWS" => "",
+                                    "T_STAFF" => "",
+                                    "S_ORDER_SERVISE" => "",
+                                    "T_STUDY" => "",
+                                    "SECTIONS_COUNT_IN_LINE" => "1",
+                                    "S_ORDER_PROJECT" => "",
+                                    "T_CHARACTERISTICS" => ""
+                                ),
+                                false
+                            );?>
+                        </div>
+                    </div>
+                </div>
+
+                <?php if ($USER->IsAdmin() || true):?>
+                <div class="row">
+                    <div class="main-content-articles col-md-12">
+                        <?$APPLICATION->IncludeComponent(
+							"aspro:tabs.allcorp2",
+							"slider",
+							array(
+								"CACHE_FILTER" => "Y",
+								"CACHE_GROUPS" => "Y",
+								"CACHE_TIME" => "36000000",
+								"CACHE_TYPE" => "A",
+								"COMPOSITE_FRAME_MODE" => "A",
+								"COMPOSITE_FRAME_TYPE" => "AUTO",
+								"DETAIL_URL" => "",
+								"FILTER_NAME" => "arrFilterProductOnMain",
+								"HIT_PROP" => "HIT",
+								"IBLOCK_ID" => "35",
+								"IBLOCK_TYPE" => "aspro_allcorp2_catalog",
+								"NEWS_COUNT" => "20",
+								"PARENT_SECTION" => "",
+								"PROPERTY_CODE" => array(
+									0 => "SHOW_ON_INDEX_PAGE",
+									1 => "STATUS",
+									2 => "ARTICLE",
+									3 => "PRICE",
+									4 => "PRICEOLD",
+									5 => "CATEGORY",
+									6 => "RECOMMEND",
+									7 => "HIT",
+									8 => "FORM_ORDER",
+									9 => "BRAND",
+									10 => "AGE",
+									11 => "HEIGHT",
+									12 => "DLINA",
+									13 => "USERS",
+									14 => "PROIZVODSTVO",
+									15 => "SIZE",
+									16 => "SERIES",
+									17 => "MARK",
+									18 => "WIDTH",
+									19 => "LANGUAGES",
+									20 => "KARTOPR",
+									21 => "DEPTH",
+									22 => "DEEP",
+									23 => "GRUZ",
+									24 => "GRUZ_STRELI",
+									25 => "DLINA_STRELI",
+									26 => "CLASS",
+									27 => "KOL_FORMULA",
+									28 => "EXTENSION",
+									29 => "MARK_STEEL",
+									30 => "MASS",
+									31 => "MODEL",
+									32 => "POWER",
+									33 => "UPDATES",
+									34 => "VOLUME",
+									35 => "PLACE",
+									36 => "SPEED",
+									37 => "DURATION",
+									38 => "TYPE_TUR",
+									39 => "THICKNESS",
+									40 => "FREQUENCY",
+									41 => "WIDTH_PROHOD",
+									42 => "WIDTH_PROEZD",
+									43 => "",
+								),
+								"SORT_BY1" => "SORT",
+								"SORT_BY2" => "ID",
+								"SORT_ORDER1" => "ASC",
+								"SORT_ORDER2" => "ASC",
+								"TITLE" => "Магазин",
+								"COMPONENT_TEMPLATE" => "slider",
+								"SECTION_ID" => "",
+								"SECTION_CODE" => "",
+								"FIELD_CODE" => array(
+									0 => "NAME",
+									1 => "PREVIEW_PICTURE",
+									2 => "DETAIL_PICTURE",
+									3 => "",
+								),
+								"S_ORDER_PRODUCT" => "Заказать",
+								"S_MORE_PRODUCT" => "Подробнее",
+								"ELEMENTS_TABLE_TYPE_VIEW" => "FROM_MODULE",
+								"SHOW_SECTION" => "Y",
+								"COUNT_IN_LINE" => "4"
+							),
+							false
+						);?>
+                    </div>
+                </div>
+                <?php endif;?>
+
+                <div class="row">
+                    <div class="main-content-articles col-md-12">
+						<?$APPLICATION->IncludeComponent(
+							"bitrix:news.list",
+							"articles_on_main-1",
+							array(
+								"IBLOCK_TYPE" => "aspro_allcorp2_content",
+								"IBLOCK_ID" => "32",
+								"NEWS_COUNT" => "8",
+								"SORT_BY1" => "SORT",
+								"SORT_ORDER1" => "ASC",
+								"SORT_BY2" => "TIMESTAMP_X",
+								"SORT_ORDER2" => "DESC",
+								"FILTER_NAME" => "arFrontFilter",
+								"FIELD_CODE" => array(
+									0 => "CODE",
+									1 => "NAME",
+									2 => "TAGS",
+									3 => "PREVIEW_TEXT",
+									4 => "PREVIEW_PICTURE",
+									5 => "SHOW_COUNTER",
+									6 => "DATE_CREATE",
+									7 => "TIMESTAMP_X",
+									8 => "",
+								),
+								"PROPERTY_CODE" => array(
+									0 => "",
+									1 => "",
+								),
+								"CHECK_DATES" => "Y",
+								"DETAIL_URL" => "",
+								"AJAX_MODE" => "Y",
+								"AJAX_OPTION_JUMP" => "N",
+								"AJAX_OPTION_STYLE" => "Y",
+								"AJAX_OPTION_HISTORY" => "Y",
+								"CACHE_TYPE" => "A",
+								"CACHE_TIME" => "3600000",
+								"CACHE_FILTER" => "Y",
+								"CACHE_GROUPS" => "N",
+								"PREVIEW_TRUNCATE_LEN" => "",
+								"ACTIVE_DATE_FORMAT" => "d.m.Y",
+								"SET_TITLE" => "N",
+								"SET_STATUS_404" => "N",
+								"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+								"ADD_SECTIONS_CHAIN" => "N",
+								"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+								"PARENT_SECTION" => "",
+								"PARENT_SECTION_CODE" => "",
+								"INCLUDE_SUBSECTIONS" => "N",
+								"PAGER_TEMPLATE" => "main",
+								"DISPLAY_TOP_PAGER" => "N",
+								"DISPLAY_BOTTOM_PAGER" => "N",
+								"PAGER_TITLE" => "",
+								"PAGER_SHOW_ALWAYS" => "N",
+								"PAGER_DESC_NUMBERING" => "N",
+								"PAGER_DESC_NUMBERING_CACHE_TIME" => "3600000",
+								"PAGER_SHOW_ALL" => "N",
+								"AJAX_OPTION_ADDITIONAL" => "",
+								"SET_BROWSER_TITLE" => "N",
+								"SET_META_KEYWORDS" => "N",
+								"SET_META_DESCRIPTION" => "N",
+								"TITLE" => "Статьи",
+								"RIGHT_TITLE" => "Все статьи",
+								"RIGHT_LINK" => "articles/",
+								"COMPONENT_TEMPLATE" => "articles_on_main-1",
+								"SET_LAST_MODIFIED" => "N",
+								"STRICT_SECTION_CHECK" => "N",
+								"SHOW_DETAIL_LINK" => "Y",
+								"PAGER_BASE_LINK_ENABLE" => "N",
+								"SHOW_404" => "N",
+								"MESSAGE_404" => "",
+								"SHOW_DATE" => "N",
+								"COUNT_IN_LINE" => "4",
+								"SHOW_SECTIONS" => "Y",
+								"NORMAL_BLOCK" => "Y",
+								"ORDER_VIEW" => "\$bOrderViewBasket",
+								"HIT_PROP" => "HIT",
+								"S_ORDER_PRODUCT" => "",
+								"S_MORE_PRODUCT" => "",
+								"SHOW_SECTION" => "Y",
+								"IMAGE_POSITION" => "left",
+								"USE_SHARE" => "N",
+								"S_ASK_QUESTION" => "",
+								"S_ORDER_SERVICE" => "",
+								"T_GALLERY" => "",
+								"T_DOCS" => "",
+								"T_GOODS" => "",
+								"T_SERVICES" => "",
+								"T_PROJECTS" => "",
+								"T_REVIEWS" => "",
+								"T_STAFF" => "",
+								"S_ORDER_SERVISE" => "",
+								"T_STUDY" => "",
+								"SECTIONS_COUNT_IN_LINE" => "1",
+								"S_ORDER_PROJECT" => "",
+								"T_CHARACTERISTICS" => "",
+								"SHOW_GOODS" => "Y",
+								"TEMPLATE_THEME" => "blue",
+								"DISPLAY_DATE" => "Y",
+								"DISPLAY_NAME" => "Y",
+								"DISPLAY_PICTURE" => "Y",
+								"DISPLAY_PREVIEW_TEXT" => "Y",
+								"MEDIA_PROPERTY" => "",
+								"SLIDER_PROPERTY" => "",
+								"SEARCH_PAGE" => "/search/",
+								"USE_RATING" => "N",
+								"COMPOSITE_FRAME_MODE" => "A",
+								"COMPOSITE_FRAME_TYPE" => "AUTO"
+							),
+							false
+						);?>
+                    </div>
+                </div>
+
+				<?php if (SITE_ID == 's1') : ?>
+					<div class="row">
+					    <div class="main-content-articles col-md-12">
+							<?
+							$GLOBALS['arrFilterArticlesFaq'] = [
+								'!PROPERTY_DO_NOT_DISPLAY_ON_PROFKADROVIK' => 217
+							];
+							?>
+							<?$APPLICATION->IncludeComponent(
+								"bitrix:news.list",
+								"articles_on_main-1",
+								array(
+									"IBLOCK_TYPE" => "aspro_allcorp2_content",
+									"IBLOCK_ID" => "32",
+									"NEWS_COUNT" => "8",
+									"SORT_BY1" => "SORT",
+									"SORT_ORDER1" => "DESC",
+									"SORT_BY2" => "TIMESTAMP_X",
+									"SORT_ORDER2" => "DESC",
+									"FILTER_NAME" => "arrFilterArticlesFaq",
+									"FIELD_CODE" => array(
+										0 => "CODE",
+										1 => "NAME",
+										2 => "TAGS",
+										3 => "PREVIEW_TEXT",
+										4 => "PREVIEW_PICTURE",
+										5 => "SHOW_COUNTER",
+										6 => "DATE_CREATE",
+										7 => "TIMESTAMP_X",
+										8 => "",
+									),
+									"PROPERTY_CODE" => array(
+										0 => "",
+										1 => "",
+									),
+									"CHECK_DATES" => "Y",
+									"DETAIL_URL" => "",
+									"AJAX_MODE" => "N",
+									"AJAX_OPTION_JUMP" => "N",
+									"AJAX_OPTION_STYLE" => "N",
+									"AJAX_OPTION_HISTORY" => "N",
+									"CACHE_TYPE" => "A",
+									"CACHE_TIME" => "3600000",
+									"CACHE_FILTER" => "N",
+									"CACHE_GROUPS" => "N",
+									"PREVIEW_TRUNCATE_LEN" => "",
+									"ACTIVE_DATE_FORMAT" => "j F",
+									"SET_TITLE" => "N",
+									"SET_STATUS_404" => "N",
+									"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+									"ADD_SECTIONS_CHAIN" => "N",
+									"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+									"PARENT_SECTION" => "",
+									"PARENT_SECTION_CODE" => "questions",
+									"INCLUDE_SUBSECTIONS" => "N",
+									"PAGER_TEMPLATE" => "main",
+									"DISPLAY_TOP_PAGER" => "N",
+									"DISPLAY_BOTTOM_PAGER" => "N",
+									"PAGER_TITLE" => "",
+									"PAGER_SHOW_ALWAYS" => "N",
+									"PAGER_DESC_NUMBERING" => "N",
+									"PAGER_DESC_NUMBERING_CACHE_TIME" => "3600000",
+									"PAGER_SHOW_ALL" => "N",
+									"AJAX_OPTION_ADDITIONAL" => "",
+									"SET_BROWSER_TITLE" => "N",
+									"SET_META_KEYWORDS" => "N",
+									"SET_META_DESCRIPTION" => "N",
+									"TITLE" => "Вопросы и ответы",
+									"RIGHT_TITLE" => "Все вопросы и ответы",
+									"RIGHT_LINK" => "articles/questions/",
+									"COMPONENT_TEMPLATE" => "articles_on_main-1",
+									"SET_LAST_MODIFIED" => "N",
+									"STRICT_SECTION_CHECK" => "Y",
+									"SHOW_DETAIL_LINK" => "Y",
+									"PAGER_BASE_LINK_ENABLE" => "N",
+									"SHOW_404" => "N",
+									"MESSAGE_404" => "",
+									"SHOW_DATE" => "N",
+									"COUNT_IN_LINE" => "4",
+									"SHOW_SECTIONS" => "Y",
+									"NORMAL_BLOCK" => "Y",
+									"ORDER_VIEW" => "\$bOrderViewBasket",
+									"HIT_PROP" => "HIT",
+									"S_ORDER_PRODUCT" => "",
+									"S_MORE_PRODUCT" => "",
+									"SHOW_SECTION" => "Y",
+									"IMAGE_POSITION" => "left",
+									"USE_SHARE" => "N",
+									"S_ASK_QUESTION" => "",
+									"S_ORDER_SERVICE" => "",
+									"T_GALLERY" => "",
+									"T_DOCS" => "",
+									"T_GOODS" => "",
+									"T_SERVICES" => "",
+									"T_PROJECTS" => "",
+									"T_REVIEWS" => "",
+									"T_STAFF" => "",
+									"S_ORDER_SERVISE" => "",
+									"T_STUDY" => "",
+									"SECTIONS_COUNT_IN_LINE" => "1",
+									"S_ORDER_PROJECT" => "",
+									"T_CHARACTERISTICS" => "",
+									"SHOW_GOODS" => "Y",
+									"TEMPLATE_THEME" => "blue",
+									"DISPLAY_DATE" => "Y",
+									"DISPLAY_NAME" => "Y",
+									"DISPLAY_PICTURE" => "Y",
+									"DISPLAY_PREVIEW_TEXT" => "Y",
+									"MEDIA_PROPERTY" => "",
+									"SLIDER_PROPERTY" => "",
+									"SEARCH_PAGE" => "/search/",
+									"USE_RATING" => "N",
+									"COMPOSITE_FRAME_MODE" => "A",
+									"COMPOSITE_FRAME_TYPE" => "AUTO"
+								),
+								false
+							);?>
+					    </div>
+					</div>
+				<?php endif;?>
+
+                <?php if (true || $USER->IsAdmin()):?>
+                <div class="row">
+                    <div class="col-md-12">
+                        <?$APPLICATION->IncludeFile(
+                            "/include/madtest.php",
+                            Array(),
+                            Array("MODE"=>"html")
+                        );?>
+                    </div>
+                </div>
+                <?php endif;?>
+            </div>
+        <?endif;?>
+
+    <div class="container">
+        <div class="row">
+            <div class="maxwidth-theme">
+                <div class="col-md-12 col-sm-12 col-xs-12 content-md">
+
+
+
+        <?if((!$isIndex || SITE_ID != 's1')):?>
+		<div class="body <?=($isIndex ? 'index' : '')?> hover_<?=$arTheme["HOVER_TYPE_IMG"]["VALUE"];?>">
+
+			<div role="main" class="main banner-auto">
+                <?php if (preg_match_all('/\/articles\/.*/', $APPLICATION->GetCurPage())):?>
+                    <?php
+						$arUri = explode('/', $APPLICATION->GetCurPage());
+						CModule::IncludeModule('iblock');
+						$arFilter = array('IBLOCK_ID' => 32, 'GLOBAL_ACTIVE' => 'Y','ACTIVE' => 'Y');
+						$rsSect = CIBlockSection::GetList(array('left_margin' => 'asc'), $arFilter, true, array('ID', 'CODE', 'NAME', 'DEPTH_LEVEL', 'IBLOCK_ID', 'SECTION_PAGE_URL', 'UF_IS_MENU'));
+						$arSections = array();
+						while ($row = $rsSect->GetNext()) {
+							//echo '$arSect = <pre>'.print_r($row, true).'</pre>';
+							//if ((int)$row['ELEMENT_CNT'] > 0 && (int)$row['DEPTH_LEVEL'] <= 3) {
+								$arSections[$row['ID']] = $row;
+							//}
+						}
+
+						$tempKey = 0;
+						foreach($arSections as $key => $arItem) {
+							if($tempKey == 0 || $arItem["DEPTH_LEVEL"] == 1) {
+								$tempKey = $key;
+							}
+
+							if($arItem["DEPTH_LEVEL"] == 2) {
+								$arSections[$tempKey]["items"][$key] = $arItem;
+								unset($arSections[$key]);
+							}
+
+							if($arItem["DEPTH_LEVEL"] > 2) {
+								unset($arSections[$key]);
+							}
+						}
+                    ?>
+                    <div class="rubricator">
+                        <div class="maxwidth-theme">
+                            <div class="col-md-12 col-sm-12 col-xs-12 content-md">
+                                <div class="rubricator-visual-list">
+                                    <div class="item rubricator-burger">
+                                        <div class="burger"><span></span></div>
+                                        Все статьи
+                                    </div>
+                                    <?php foreach ($arSections as $k=>$item):?>
+                                        <?php if ((int)$item['UF_IS_MENU'] == 1):?>
+                                            <a href="<?php echo $item['SECTION_PAGE_URL'];?>" class="item" title="<?php echo $item['NAME'];?>"><?php echo $item['NAME'];?></a>
+                                        <?php endif;?>
+                                    <?php endforeach;?>
+                                </div>
+                            </div>
+                        </div>
+						<div class="rubricator-hidden-menu">
+							<div class="maxwidth-theme">
+								<div class="col-md-12 col-sm-12 col-xs-12 content-md">
+									<div class="btn-back-mobile"></div>
+									<div class="menu-level-1">
+										<? foreach ($arSections as $k=>$item): ?>
+											<? if((int)$item['UF_IS_MENU'] == 0) continue; ?>
+											<? $item['SELECTED'] = (isset($arUri[2]) && $item['CODE'] == $arUri[2]); ?>
+											<div class="item-level-1">
+												<a href="<?= $item['SECTION_PAGE_URL']; ?>" title="<?= $item['NAME']; ?>"<? if ($item['SELECTED']): ?> class="selected"<? endif; ?>><?= $item['NAME']; ?></a>
+												<? if(isset($item["items"])): ?>
+													<? $hideItems = 0; ?>
+													<? foreach($item["items"] as $arChild): ?>
+														<? if((int)$arChild['UF_IS_MENU'] == 0) $hideItems++; ?>
+													<? endforeach; ?>
+													<? if($hideItems < count($item["items"])): ?>
+														<div class="menu-level-2">
+															<? foreach($item["items"] as $arChild): ?>
+																<? if((int)$arChild['UF_IS_MENU'] == 0) continue; ?>
+																<div class="item">
+																	<a href="<?= $arChild['SECTION_PAGE_URL']; ?>" class="title-h3<? if ($arChild['SELECTED']): ?> selected<? endif; ?>" title="<?= $arChild['NAME']; ?>"><?= $arChild['NAME']; ?></a>
+																</div>
+															<? endforeach; ?>
+														</div>
+													<? endif; ?>
+												<? endif; ?>
+											</div>
+										<? endforeach; ?>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<? /* ?>
+                        <div class="rubricator-hidden-menu">
+                            <div class="maxwidth-theme">
+                                <div class="col-md-12 col-sm-12 col-xs-12 content-md">
+                                    <div class="btn-back-mobile"></div>
+                                    <div class="menu-level-1">
+                                        <?php
+											$tmp = 1;
+											foreach ($arSections as $k=>$item):
+											$item['SELECTED'] = (isset($arUri[2]) && $item['CODE'] == $arUri[2]);
+                                        ?>
+                                        <?php if ((int)$item['DEPTH_LEVEL'] == 2 && ($tmp == 3 || $tmp == 2)): ?>
+											</div>
+										<?php endif;?>
+
+                                        <?php if ((int)$item['DEPTH_LEVEL'] == 1 && $tmp == 3):?></div>
+                                            </div>
+                                        </div><?php endif;?>
+
+                                        <?php if ((int)$item['DEPTH_LEVEL'] == 1 && $tmp == 2):?></div>
+                                        </div><?php endif;?>
+
+                                        <?php if ((int)$item['DEPTH_LEVEL'] == 1):?><div class="item-level-1">
+                                            <a href="<?php echo $item['SECTION_PAGE_URL'];?>" title="<?php echo $item['NAME'];?>"<?php if ($item['SELECTED']):?> class="selected"<?php endif;?>><?php echo $item['NAME'];?></a><?php endif;?>
+
+                                        <?php if ((int)$item['DEPTH_LEVEL'] == 2 && $tmp == 1):?><div class="menu-level-2"><?php endif;?>
+
+                                        <?php if ((int)$item['DEPTH_LEVEL'] == 2):?><div class="item">
+                                                    <a href="<?php echo $item['SECTION_PAGE_URL'];?>" class="title-h3<?php if ($item['SELECTED']):?> selected<?php endif;?>" title="<?php echo $item['NAME'];?>"><?php echo $item['NAME'];?></a><?php endif;?>
+
+                                        <?php if ((int)$item['DEPTH_LEVEL'] == 3):?><a href="<?php echo $item['SECTION_PAGE_URL'];?>" title="<?php echo $item['NAME'];?>"<?php if ($item['SELECTED']):?> class="selected"<?php endif;?>><?php echo $item['NAME'];?></a><?php endif;?>
+
+                                         <?php $tmp = (int)$item['DEPTH_LEVEL'];?>
+                                        <?php endforeach;?>
+                                        <?php for ($i = $tmp; $i >= 1; $i--):?></div><?php endfor;?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<? */ ?>
+                    </div>
+                <?php endif;?>
+
+				<?if((!$isIndex || SITE_ID != 's1') && !$is404 && !$isForm):?>
+					<?$APPLICATION->ShowViewContent('section_bnr_content');?>
+					<?if($APPLICATION->GetProperty("HIDETITLE")!=='Y'):?>
+						<!--title_content-->
+						<? CAllcorp2::ShowPageType('page_title');?>
+						<!--end-title_content-->
+					<?endif;?>
+					<?$APPLICATION->ShowViewContent('top_section_filter_content');?>
+				<?endif; // if !$isIndex && !$is404 && !$isForm?>
+
+				<div class="container <?=(($isCabinet || SITE_ID == 's6') ? 'cabinte-page' : '');?><?=($isBlog ? ' blog-page' : '');?> <?=CAllcorp2::ShowPageProps("ERROR_404");?>">
+					<?if((!$isIndex || SITE_ID != 's1')):?>
+						<div class="row">
+							<?if($APPLICATION->GetProperty("FULLWIDTH")!=='Y'):?>
+								<div class="maxwidth-theme">
+							<?endif;?>
+							<?if($is404):?>
+								<div class="col-md-12 col-sm-12 col-xs-12 content-md">
+							<?else:?>
+								<div class="col-md-12 col-sm-12 col-xs-12 content-md">
+									<div class="right_block narrow_<?=CAllcorp2::ShowPageProps("MENU");?>">
+									<?CAllcorp2::get_banners_position('CONTENT_TOP');?>
+
+									<?ob_start();?>
+										<?$APPLICATION->IncludeComponent(
+											"bitrix:menu",
+											"left",
+											array(
+												"ROOT_MENU_TYPE" => "left",
+												"MENU_CACHE_TYPE" => "A",
+												"MENU_CACHE_TIME" => "3600000",
+												"MENU_CACHE_USE_GROUPS" => "N",
+												"MENU_CACHE_GET_VARS" => array(
+												),
+												"MAX_LEVEL" => "4",
+												"CHILD_MENU_TYPE" => "left",
+												"USE_EXT" => "Y",
+												"DELAY" => "N",
+												"ALLOW_MULTI_SELECT" => "Y",
+												"COMPONENT_TEMPLATE" => "left"
+											),
+											false
+										);?>
+									<?$sMenuContent = ob_get_contents();
+									ob_end_clean();?>
+							<?endif;?>
+					<?endif;?>
+					<?CAllcorp2::checkRestartBuffer();?>
+
+				<?endif;?>#WORK_AREA#<?php global $USER;?>
+<?if($isIndex && SITE_ID == 's1'):?>
+
+<?else:?>
+
+					<?if((!$isIndex || SITE_ID != 's1')):?>
+						<?CAllcorp2::checkRestartBuffer();?>
+					<?endif;?>
+					<?IncludeTemplateLangFile(__FILE__);?>
+					<?global $arTheme, $isIndex, $is404;?>
+					<?if((!$isIndex || SITE_ID != 's1')):?>
+							<?if($is404):?>
+								</div>
+							<?else:?>
+									<?CAllcorp2::get_banners_position('CONTENT_BOTTOM');?>
+									</div> <?// class=right_block?>
+									<?if($APPLICATION->GetProperty("MENU") != "N" && !defined("ERROR_404")):?>
+										<?CAllcorp2::ShowPageType('left_block');?>
+									<?endif;?>
+								</div><?// class=col-md-12 col-sm-12 col-xs-12 content-md?>
+							<?endif;?>
+							<?if($APPLICATION->GetProperty("FULLWIDTH")!=='Y'):?>
+								</div><?// class="maxwidth-theme?>
+							<?endif;?>
+						</div><?// class=row?>
+					<?else:?>
+						<?CAllcorp2::ShowPageType('indexblocks');?>
+					<?endif;?>
+				</div><?// class=container?>
+				<?CAllcorp2::get_banners_position('FOOTER');?>
+			</div><?// class=main?>
+		</div><?// class=body?>
+<?endif;?>                   
+					</div>
+                </div>
+            </div>
+        </div>
+
+		<?CAllcorp2::ShowPageType('footer');?>
+		<div class="bx_areas">
+			<?CAllcorp2::ShowPageType('bottom_counter');?>
+		</div>
+		<?CAllcorp2::SetMeta();?>
+		<?CAllcorp2::ShowPageType('search_title_component');?>
+		<?CAllcorp2::ShowPageType('basket_component');?>
+		<?CAllcorp2::AjaxAuth();?>
+
+        <?$APPLICATION->IncludeComponent(
+            "logicasoft:element.activity",
+            "",
+            Array(
+                "CACHE_GROUPS" => "Y",
+                "CACHE_TIME" => "36000000",
+                "CACHE_TYPE" => "A",
+                "COMPOSITE_FRAME_MODE" => "A",
+                "COMPOSITE_FRAME_TYPE" => "AUTO"
+            )
+        );?>
+
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym(53297200, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true,
+                ecommerce:"dataLayer"
+            });
+            <?php if ($USER->IsAuthorized()):?>ym(53297200, 'setUserID', '<?=$USER->GetID()?>');
+
+            ym(53297200, 'userParams', {UserID: <?=$USER->GetID()?>});<?php endif;?>
+
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/53297200" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138443140-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-138443140-1');
+        </script>
+
+		<?if (false) :?>
+	    <script>!function(e,t,d,s,a,n,c){e[a]={},e[a].date=(new Date).getTime(),n=t.createElement(d),c=t.getElementsByTagName(d)[0],n.type="text/javascript",n.async=!0,n.src=s,c.parentNode.insertBefore(n,c)}(window,document,"script","https://profkadrovikru.push.world/https.embed.js","pw"),pw.websiteId="8f685fefe80bce6deebc5e45a48eb56f33ed0a802b4573b8c4f8258f0c6dbb84";</script>
+		<?endif?>
+
+        <script>
+            (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+            })(window,document,'https://cdn.bitrix24.ru/b10439619/crm/site_button/loader_6_ojic01.js');
+        </script>
+		<?php if (true):?>
+		<script>
+			(function(w,d,u){
+					var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+					var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+			})(window,document,'https://cdn-ru.bitrix24.ru/b10439619/crm/site_button/loader_4_8cgu2i.js');
+		</script>
+		<?php endif;?>
+
+		<?if (false) :?>
+		<script type='text/javascript' async defer src='https://profkadrovik.push4site.com/sdk'></script>
+		<?endif?>
+
+		<!-- BEGIN LEADGENIC CODE {literal} -->
+		<!-- Put this script tag before the </body> tag of your page -->
+		<script type="text/javascript" charset="UTF-8" async src="https://gate.leadgenic.ru/getscript?site=6273a1fb46e0fb000102928a"></script>
+		<!-- {/literal} END LEADGENIC CODE -->
+		<div class="cookie">
+			<p>Пользуясь нашим сайтом, вы соглашаетесь с тем, что мы используем cookies</p>
+			<button class="cookie__accept btn">OK</button>
+		</div>
+	</body>
+</html>

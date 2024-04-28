@@ -1,0 +1,1176 @@
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *  IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+}
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit;
+}
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block;
+}
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *  controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *  `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+}
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block;
+}
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block;
+}
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none;
+}
+.main-header {
+  padding-top: 18px;
+  background-image: url("../img/header-mobile.png");
+  background-size: cover;
+  background-position: -7px;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1366px) {
+  .main-header {
+    padding-top: 26px;
+    background-image: url("../img/header-desktop.png");
+    background-size: cover;
+    background-position: bottom 61px right -310px;
+  }
+}
+.main-logo {
+  width: 213px;
+  height: 32px;
+  margin-bottom: 40px;
+}
+@media (min-width: 1366px) {
+  .main-logo {
+    margin-bottom: 62px;
+    width: 245.169px;
+    height: 36px;
+  }
+}
+@media (min-width: 1366px) {
+  .header-container {
+    width: 601px;
+  }
+}
+.main-header h1 {
+  color: #313131;
+  font-family: Merriweather;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 39.6px;
+  text-transform: uppercase;
+  text-align: left;
+}
+@media (min-width: 1366px) {
+  .main-header h1 {
+    font-size: 60px;
+    line-height: 110%;
+    /* 66px */
+  }
+}
+.main-header h2 {
+  color: #313131;
+  font-family: Merriweather;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 39.6px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 24px;
+}
+@media (min-width: 1366px) {
+  .main-header h2 {
+    font-size: 60px;
+    line-height: 110%;
+    /* 66px */
+  }
+}
+.header-text {
+  color: #313131;
+  font-family: "Golos Text";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  margin-bottom: 32px;
+}
+@media (min-width: 1366px) {
+  .header-text {
+    width: 542px;
+    text-align: center;
+  }
+}
+@media (min-width: 1366px) {
+  .header-button-wrapper {
+    display: flex;
+    gap: 16px;
+  }
+}
+.button-support {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.8px;
+  background-color: #1F1F1F;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+@media (min-width: 1366px) {
+  .button-support {
+    margin-bottom: 0;
+    height: 72px;
+    width: 263px;
+  }
+}
+.button-support:hover {
+  background-color: #FBCE51;
+  color: #1F1F1F;
+}
+.button-support:active {
+  background-color: inherit;
+}
+.button-about {
+  color: #313131;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.8px;
+  background-color: #FFF;
+  padding: 18px 20px;
+  margin-bottom: 291px;
+}
+@media (min-width: 1366px) {
+  .button-about {
+    margin-bottom: 0;
+    background-color: inherit;
+    border: 2px solid #1F1F1F;
+  }
+}
+.button-about:hover {
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+}
+.header-button br {
+  display: none;
+}
+@media (min-width: 1366px) {
+  .header-button {
+    width: 263px;
+    height: 72px;
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+  }
+  .header-button br {
+    display: unset;
+  }
+}
+.ticker {
+  display: flex;
+  align-items: center;
+  background-color: #F54932;
+  height: 38px;
+  overflow: hidden;
+  width: 100%;
+}
+.ticker marquee {
+  text-wrap: nowrap;
+  display: inline-block;
+  color: #FFF;
+  font-family: Merriweather;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17.6px;
+  text-transform: uppercase;
+}
+.ticker marquee svg {
+  margin-bottom: 3px;
+}
+@media (min-width: 1366px) {
+  .ticker {
+    margin-top: 130px;
+    height: 60px;
+  }
+  .ticker marquee {
+    font-size: 22px;
+    line-height: 110%;
+  }
+}
+.page {
+  height: 100%;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+.page-body {
+  width: 375px;
+  margin: 0 auto;
+}
+@media (min-width: 1366px) {
+  .page-body {
+    width: 1366px;
+  }
+}
+a,
+h1,
+h2,
+h3,
+ul,
+li,
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 66px;
+  font-family: "Golos Text";
+}
+.padding-box {
+  padding: 0 20px;
+}
+@media (min-width: 1366px) {
+  .padding-box {
+    padding: 0 76px;
+  }
+}
+svg circle:hover {
+  fill: #FBCE51;
+}
+.representation {
+  padding-top: 48px;
+  position: relative;
+}
+@media (min-width: 1366px) {
+  .representation {
+    padding-top: 106px;
+  }
+}
+.representation h2 {
+  color: #313131;
+  font-family: Merriweather;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 37.8px;
+  text-transform: uppercase;
+  text-align: left;
+}
+@media (min-width: 1366px) {
+  .representation h2 {
+    font-size: 36px;
+    line-height: 135%;
+    width: 764px;
+  }
+}
+.representation__title {
+  margin-bottom: 262px;
+}
+@media (min-width: 1366px) {
+  .representation__title {
+    margin: 0;
+  }
+}
+.representation__second-title {
+  margin-bottom: 460px;
+}
+@media (min-width: 1366px) {
+  .representation__second-title {
+    margin-bottom: 92px;
+    margin-top: -48px;
+    text-indent: 162px;
+  }
+}
+.big-colored-title {
+  color: #F54932;
+  font-weight: 700;
+}
+.representation__img-betwin {
+  position: absolute;
+  top: 220px;
+  left: 12px;
+}
+@media (min-width: 1366px) {
+  .representation__img-betwin {
+    width: 394px;
+    height: 250px;
+    top: 106px;
+    left: 893px;
+  }
+}
+.representation__img-bottom {
+  position: absolute;
+  top: 651px;
+  left: -4px;
+}
+@media (min-width: 1366px) {
+  .representation__img-bottom {
+    top: unset;
+    width: 528.495px;
+    height: 573.976px;
+  }
+}
+.representation__text {
+  color: #313131;
+  font-family: Merriweather;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 37.8px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+@media (min-width: 1366px) {
+  .representation__text {
+    width: 704px;
+    font-size: 36px;
+    line-height: 135%;
+  }
+}
+@media (min-width: 1366px) {
+  .representation__text__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 415px;
+  }
+}
+.representation-table {
+  width: 345.285px;
+  height: 482.705px;
+  position: relative;
+}
+.representation-table .table-mobile-title p {
+  color: #313131;
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+  opacity: 0.7;
+}
+.representation-table .table-mobile-text {
+  position: absolute;
+  left: 1px;
+  padding-top: 51px;
+  padding-bottom: 10px;
+  width: 335px;
+  border-bottom: 2px solid #D0D0D0;
+}
+.representation-table .table-mobile-text p {
+  color: #313131;
+  font-family: "Golos Text";
+  font-weight: 600;
+  line-height: 120%;
+}
+.representation-table .table-signature {
+  color: #3057A2;
+  font-family: "Golos Text";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+}
+@media (min-width: 1366px) {
+  .representation-table {
+    width: 704px;
+    height: 339.162px;
+    position: absolute;
+    right: 89px;
+    top: 620px;
+  }
+  .representation-table p {
+    font-size: 20px;
+    padding: 16px;
+  }
+  .representation-table p::first-letter {
+    text-transform: uppercase;
+  }
+  .representation-table .table-mobile-title {
+    border-bottom: 2px solid #D0D0D0;
+  }
+  .representation-table .table-mobile-title p {
+    padding-left: 0;
+  }
+  .representation-table .table-mobile-text {
+    position: unset;
+    padding: 0;
+    width: inherit;
+    border-left: 2px solid #D0D0D0;
+  }
+  .representation-table .table-mobile-text-last {
+    border-bottom: none;
+  }
+  .representation-table .table-signature p {
+    padding-top: 48px;
+    padding-left: 0;
+    font-size: 20px;
+    line-height: 120%;
+  }
+}
+.redline {
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
+}
+.stages {
+  padding-top: 110px;
+  position: relative;
+}
+.stages .button-carusel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stages .button-carusel-container div {
+  display: flex;
+  width: 74px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 16px;
+}
+@media (min-width: 1366px) {
+  .stages {
+    padding-top: 200px;
+  }
+  .stages .button-carusel-container {
+    display: none;
+  }
+}
+.stages h2 {
+  color: #313131;
+  font-family: Merriweather;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 39.6px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+@media (min-width: 1366px) {
+  .stages h2 {
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 120%;
+    width: 806px;
+    margin-bottom: 0;
+  }
+}
+.stages__text {
+  color: #3057A2;
+  font-family: "Golos Text";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 148px;
+}
+@media (min-width: 1366px) {
+  .stages__text {
+    font-size: 20px;
+    width: 280px;
+    margin-top: -60px;
+    margin-left: 300px;
+    margin-bottom: 54px;
+  }
+}
+.stages__img-plane {
+  position: absolute;
+  top: 310px;
+  z-index: 1;
+}
+@media (min-width: 1366px) {
+  .stages__img-plane {
+    width: 470px;
+    height: 265px;
+    top: 490px;
+    right: -60px;
+    z-index: 1;
+  }
+}
+.stages-list {
+  width: 335px;
+  height: 328px;
+  overflow: hidden;
+}
+@media (min-width: 1366px) {
+  .stages-list {
+    width: unset;
+    height: unset;
+    overflow: unset;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  .stages-list .slide--double,
+  .stages-list .slide--single,
+  .stages-list .slide-second-item {
+    margin: 0;
+    width: unset;
+    height: unset;
+    background-size: cover;
+  }
+  .stages-list li:nth-child(3) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+  }
+  .stages-list li:nth-child(7) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  .stages-list li:nth-child(7) p {
+    margin-right: 285px;
+  }
+}
+@media (min-width: 1366px) {
+  .stages-list li {
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+}
+.slide--single {
+  width: 335px;
+  height: 300px;
+  background-image: url("../img/background-sliade.png");
+  display: grid;
+  grid-template-columns: 20px 36px 243px;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.slide--single p {
+  margin-top: 62px;
+}
+@media (min-width: 1366px) {
+  .slide--single {
+    grid-template-columns: 20px 36px 1fr;
+  }
+  .slide--single p {
+    margin-top: 20px;
+  }
+}
+.slide--double {
+  width: 335px;
+  height: 300px;
+  background-image: url("../img/background-sliade.png");
+  display: grid;
+  grid-template-columns: 20px 36px 243px;
+  gap: 16px;
+  position: relative;
+}
+.slide--double p {
+  margin-top: 62px;
+}
+@media (min-width: 1366px) {
+  .slide--double {
+    grid-template-columns: 20px 36px 1fr;
+  }
+  .slide--double p {
+    margin-top: 20px;
+  }
+}
+.slide-second-item {
+  margin-top: -188px;
+  background-image: none;
+  height: 150px;
+  margin-bottom: 67px;
+}
+@media (min-width: 1366px) {
+  .slide-second-item {
+    background-image: url("../img/background-sliade.png");
+  }
+}
+.slide3-margin-top {
+  margin-top: -238px;
+  margin-bottom: 117px;
+}
+.stages-list p {
+  color: #313131;
+  font-family: "Golos Text";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+}
+@media (min-width: 1366px) {
+  .stages-list p {
+    font-size: 20px;
+    line-height: 120%;
+  }
+}
+.stages-number {
+  width: 36px;
+  height: 36px;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 45px;
+  color: #313131;
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.button-carusel {
+  background: none;
+  border: none;
+  display: flex;
+}
+.button-carusel:hover {
+  fill: #FBCE51;
+}
+.button-carusel--reverse {
+  transform: rotate(180deg);
+}
+@media (min-width: 1366px) {
+  .stages-list-text--mobile-break {
+    display: none;
+  }
+}
+.stages-list-text--desktop-break {
+  display: none;
+}
+@media (min-width: 1366px) {
+  .stages-list-text--desktop-break {
+    display: unset;
+  }
+}
+.slidevision {
+  display: none;
+}
+@media (min-width: 1366px) {
+  .slidevision {
+    display: grid;
+  }
+}
+.slidevision2 {
+  display: grid;
+}
+.members {
+  padding-top: 120px;
+}
+@media (min-width: 1366px) {
+  .members {
+    padding-top: 200px;
+    position: relative;
+  }
+}
+.members h2 {
+  color: #313131;
+  font-family: Merriweather;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 39.6px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+@media (min-width: 1366px) {
+  .members h2 {
+    font-size: 54px;
+    line-height: 120%;
+  }
+}
+.members-list {
+  display: flex;
+  flex-direction: column;
+  width: 335px;
+  height: 394px;
+  overflow: hidden;
+}
+@media (min-width: 1366px) {
+  .members-list {
+    width: 1224.333px;
+    height: 493.486px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.members-active {
+  order: -1;
+}
+.members-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 335px;
+  height: 393px;
+  margin-bottom: 40px;
+}
+.members-slide img {
+  width: 244px;
+  height: 244px;
+  margin-bottom: 23px;
+}
+.members-slide h3 {
+  color: #313131;
+  font-family: "Golos Text";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+  margin-bottom: 8px;
+}
+.members-slide p {
+  color: #313131;
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+@media (min-width: 1366px) {
+  .members-slide {
+    width: 394px;
+    height: 482px;
+    margin-bottom: 0;
+  }
+  .members-slide img {
+    width: 320px;
+    height: 320px;
+    margin-bottom: 28px;
+  }
+}
+.members-about {
+  color: #3057A2;
+  font-family: "Golos Text";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19.2px;
+  padding: 12px;
+  border-radius: 62px;
+  border: 1px solid #3057A2;
+}
+.members-about:hover {
+  background-color: #3057A2;
+  color: #FFFFFF;
+}
+.button-couresel-container-members {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  margin-top: 40px;
+}
+.button-couresel-container-members .members-bulet-container {
+  color: #313131;
+  font-family: "Golos Text";
+  font-size: 16px;
+  line-height: 120%;
+  width: 29px;
+  margin: 0 14px;
+}
+@media (min-width: 1366px) {
+  .button-couresel-container-members {
+    position: absolute;
+    top: 168px;
+    right: 79px;
+  }
+  .button-couresel-container-members .button-carusel {
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .button-couresel-container-members .button-carusel svg {
+    width: 44px;
+    height: 44px;
+  }
+}
+.members-bulet-container p {
+  color: #313131;
+}
+.member-all {
+  opacity: 0.6;
+}
+.main-footer {
+  padding-top: 40px;
+  background: #E9DED4;
+  padding-bottom: 60px;
+}
+.main-footer p {
+  color: #313131;
+  font-family: "Golos Text";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  opacity: 0.6;
+}
+
+/*# sourceMappingURL=style.css.map */

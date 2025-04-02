@@ -1,0 +1,34 @@
+.main-body {
+    box-sizing: border-box;
+}
+
+.main-program {
+    background-color: aqua;
+    width: 461px;
+    height: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+}
+
+/* Блок температуры */
+
+.temerature-spot {
+    width: 424px;
+    height: 111px;
+    background-color: red;
+    border-radius: 20px;
+}
+
+
+/* Блок Одежды */
+
+.clothes-spot {
+    width: 424px;
+    height: 521px;
+    background-color: azure;
+    border-radius: 20px;
+}

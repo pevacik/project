@@ -1,0 +1,202 @@
+.head-banner-color {
+
+  background: #EEF5FA;
+  background-image: url(../img/mobile/man-rock.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom, right;
+
+  @media (min-width: @desktop-width) {
+    background: linear-gradient(rgba(157, 202, 255, 0.03), rgba(203, 227, 255, 0.3), rgba(235, 245, 255, 0.5)), #EEF5FA;
+    background-image: url(../img/desktop/man-rock-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+
+  }
+}
+
+.head-banner {
+  padding-top: 48px;
+  padding-bottom: 63px;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 93px;
+    padding-bottom: 110px;
+  }
+}
+
+.head-banner h1 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: @color-verdana-gotham;
+
+  @media (min-width: @desktop-width) {
+    font-size: 56px;
+    line-height: 64px;
+    margin-bottom: 46px;
+  }
+}
+
+.head-banner__change-text {
+  color: @color-verdana-gotham;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 13px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 44px;
+  left: 140px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 25px;
+    top: 80px;
+    left: 255px;
+  }
+}
+
+.head-banner__description-text {
+  display: block;
+  width: 234px;
+  font-family: Verdana;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 66px;
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 688px;
+    font-size: 16px;
+    line-height: 24px;
+
+    & br {
+      display: unset;
+    }
+  }
+}
+
+.head-banner-button {
+  width: 304px;
+  padding: 18px 40px;
+  background: linear-gradient(90deg, #F90 0.03%, #FF7A00 99.99%);
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 7px solid white;
+}
+
+
+// периоды
+
+.period {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 79px;
+    margin-top: 79px;
+
+    & .period__send,
+    .period__training {
+      box-sizing: border-box;
+      display: flex;
+      background: #B7D3E4;
+      width: 584px;
+      height: 171px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: baseline;
+      gap: 0px;
+      padding: 0 20px;
+
+    }
+
+    & .period__term-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 30px;
+      color: #3f546c;
+      background: #fcfeff;
+      padding: 0px 8px;
+
+
+    }
+
+    & .colored-title {
+      display: inline;
+      background: @golden;
+      color: @color-gotham2;
+      padding: 6px 8px;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 30px;
+    }
+
+  }що
+}
+
+// лица
+
+.head-party {
+  background-color: #1B83FF;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  height: 558px;
+  padding-top: 46px;
+
+  & .head-party_list {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: left;
+    height: 310px;
+    padding: 42px 31px 43px 31px;
+
+    & ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 19px;
+
+      & p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #eef5fa;
+      }
+    }
+  }
+}
+
+.head-party_list-title {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+
+}
+
+.head-party_list-wrapper {
+  display: flex;
+  justify-content: center;
+
+}
+
+.head-party__main-title {
+  font-weight: 700;
+  font-size: 130px;
+  text-transform: uppercase;
+  color: #3c95ff;
+}

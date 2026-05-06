@@ -1,0 +1,14 @@
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.task_buttons {
+    display: flex;
+    gap: 15px;
+}

@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+body {
+  background-color: rgba(0, 0, 255, 0.103);
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.indent {
+  padding: 50px 0 0 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: 0 -15px; */
+}
+
+table {
+  width: 100%;
+}
+
+.col-3 {
+  margin: 15px;
+  width: calc(25% - 30px);
+}
+
+
+/* category */
+
+.category {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  display: block;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.category img {
+  display: block;
+}
+
+
+
+
+
+
+.language {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+}
+
+.language a {
+  width: calc(33.3333% - 30px);
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 15px;
+  height: 196.033px;
+  overflow: hidden;
+  padding: 15px;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-right: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.indent {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.category {
+  width: calc(25% - 30px);
+  margin: 15px;
+  border: 1px solid #ccc;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+
+.Popup {
+  position: fixed;
+  top: 0;
+  right: 10px;
+
+
+
+}
+
+.popup_content {
+  position: relative;
+  background-color: #fff;
+  max-width: 250px;
+
+  padding: 25px;
+  border-radius: 25px;
+}
+
+.popup_close {
+  position: absolute;
+  cursor: pointer;
+  top: 5px;
+  right: 30px;
+
+  &:hover {
+    color: red;
+  }
+}

@@ -1,0 +1,51 @@
+/* NAV */
+
+.nav-link {
+
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.main-nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.nav {
+    color: #000;
+    font-size: 45px;
+}
+
+.nav-active {
+    text-decoration: underline;
+}
+
+
+/* Filter */
+
+.main-filter {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+
+/* poduct-container */
+.poduct-container {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.poduct-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}

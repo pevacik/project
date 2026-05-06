@@ -1,0 +1,11 @@
+@import './tabler-icons.min.css';
+@import './common.css';
+
+.col-4 {
+    background-color: var(--bg-optional);
+    border-radius: var(--br);
+    padding: 10px;
+}
+.col-4 img {
+    border-radius: var(--br-middle);
+}

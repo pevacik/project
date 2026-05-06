@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Игра "Крестики Нолики". Версия 3</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <div class="viewport loading active">
+            <div class="container">
+                <p class="loading_text">Загрузка ...</p>
+                <div class="loading_content">
+                    <div class="loading_line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="viewport start">
+            <div class="start_container">
+                <h1>Крестики-Нолики</h1>
+                <div class="button button_game_start">Начать игру</div>
+            </div>
+        </div>
+
+        <div class="viewport game">
+            <div class="container">
+                
+                <div class="row players">
+                    <div class="col-6 player_1">
+                        <div class="player_img">
+                            <img src="img/player-1.svg" alt="Игрок 1">
+                            <div class="player_simbol">
+                                <i class="ti ti-x"></i>
+                            </div>
+                        </div>
+                        <div class="player_data">
+                            <h3 class="player_name"></h3>
+                            <p class="player_turn active">Ваш ход</p>
+                        </div>
+                    </div>
+                    <div class="col-6 player_2">
+                        <div class="player_img">
+                            <img src="img/player-2.svg" alt="Игрок 2">
+                            <div class="player_simbol">
+                                <i class="ti ti-circle"></i>
+                            </div>
+                        </div>
+                        <div class="player_data">
+                            <h3 class="player_name"></h3>
+                            <p class="player_turn">Ожидайте</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="playing_field">
+                    <div class="playing_field_col"></div>
+                    <div class="playing_field_col"></div>
+                    <div class="playing_field_col"></div>
+                    <div class="playing_field_col"></div>
+                    <div class="playing_field_col"></div>
+                    <div class="playing_field_col"></div>
+                    <div class="playing_field_col"></div>
+                    <div class="playing_field_col"></div>
+                    <div class="playing_field_col"></div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="notices"></div>
+
+        <div class="popup popup_start_game">
+            <div class="popup_bg popup_close"></div>
+            <div class="popup_content">
+                <form>
+                    <input type="text" class="input_name" placeholder="Введите Ваше имя">
+                    <input type="text" class="input_name_friend" placeholder="Введите имя друга">
+                    <button class="button button_popup_start_game">Начать игру</button>
+                </form>
+                <div class="popup_button_close popup_close">
+                    <i class="ti ti-x"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup popup_win">
+            <div class="popup_bg popup_close"></div>
+            <div class="popup_content">
+                <div class="popup_user_img">
+                    <img src="img/player-1.svg" alt="User">
+                </div>
+                <h2 class="popup_heading"></h2>
+                <div class="button">Начать заново</div>
+                <a href="" class="button_optional">Выйти</a>
+                <div class="popup_button_close popup_close">
+                    <i class="ti ti-x"></i>
+                </div>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./stye.css">
+  <title>База пошитых изделий</title>
+
+</head>
+
+<body>
+  <h1>База пошитых изделий</h1>
+
+  <!-- Форма ввода -->
+  <div class="form">
+    <h2>Добавить изделие</h2>
+    <label>Название изделия</label>
+    <input type="text" id="name" required />
+
+    <label>Мин. тираж</label>
+    <input type="number" id="quantity" min="1" required />
+
+    <label>Клиент</label>
+    <input type="text" id="client" required />
+
+    <label>Материал</label>
+    <input type="text" id="material" placeholder="Атлас + кружево" required />
+
+    <label>Ссылка на папку</label>
+    <input type="url" id="link" placeholder="https://drive.google.com/..." required />
+
+    <label>Стоимость</label>
+    <input type="text" id="price" placeholder="22 000 руб, по запросу" />
+
+    <button onclick="addEntry()">Добавить</button>
+  </div>
+
+  <!-- Таблица -->
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>Название изделия</th>
+        <th>Мин. тираж</th>
+        <th>Стоимость</th>
+        <th>Клиент</th>
+        <th>Материал</th>
+        <th>Фото / Ссылка</th>
+
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <!-- Данные будут добавлены сюда -->
+    </tbody>
+  </table>
+  <script src="./main.js"></script>
+
+</body>
+
+</html>

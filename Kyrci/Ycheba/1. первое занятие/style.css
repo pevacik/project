@@ -1,0 +1,13 @@
+h2 {
+    color: green;
+}
+h2.active {
+    color: red;
+}
+
+
+button {
+    background-color: rgb(204, 255, 0);
+    padding: 10px 15px;
+    border-radius: 10px;
+}

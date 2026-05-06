@@ -1,0 +1,42 @@
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+.slider {
+    width: 700px;
+    margin: 200px auto;
+    outline: 2px solid red;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: 250ms;
+}
+
+
+.arrow {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: red;
+    border-radius: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* top: calc(50% - 17.5px); */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.arrow-left {
+    left: 2px;
+
+}
+
+.arrow-right {
+    right: 2px;
+}

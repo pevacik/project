@@ -1,0 +1,41 @@
+ul,
+li {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+h1 {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.todo-input-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.todo-item, .todo-list-done_item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 8px;
+}
+
+.todo-list-done_item {
+    text-decoration: line-through;
+    color: red;
+}

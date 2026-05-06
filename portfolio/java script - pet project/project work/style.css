@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#taskInput {
+    width: 75%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#addButton {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    background: #f8f8f8;
+    margin: 5px 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button.delete {
+    background: #ff4444;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Calculator */
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-input {
+    height: 60px;
+    width: 310px;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.calculator-batton {
+    background: #ff4444;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    transition: background 0.2s;
+}
+
+.calculator-batton:active {
+    background: #ddd;
+}

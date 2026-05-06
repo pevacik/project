@@ -14,3 +14,13 @@ modalClose.addEventListener("click", function () {
   modal.classList.add("visually-hidden");
   console.log("ремув произошел");
 });
+
+
+function abbrevName(name) {
+  let ggg = name.toUpperCase();
+  let arr = ggg.split('  ');
+  
+  return arr
+}
+const dsf = "Привет как";
+console.log(abbrevName(dsf));

@@ -1,0 +1,387 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* ===== Главный экран ===== */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  text-align: center;
+}
+
+.home__title {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.home__subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.home__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.home__button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+.home__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.home__button:active {
+  transform: translateY(0);
+}
+
+.home__button--tips {
+  background: #ffd166;
+}
+
+.home__button--schedule {
+  background: #06d6a0;
+}
+
+.home__button--calendar {
+  background: #4cc9f0;
+}
+
+.home__button-icon {
+  font-size: 1.8rem;
+}
+
+/* ===== Общие стили страниц ===== */
+.page {
+  background: #fff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.page__back {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.page__back:hover {
+  text-decoration: underline;
+}
+
+.page__title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ===== Форма добавления смены ===== */
+form h2 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+form p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+form div {
+  margin-bottom: 16px;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+form button[type='submit'] {
+  width: 100%;
+  padding: 14px;
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form button[type='submit']:hover {
+  background: #5a6fd6;
+}
+
+/* ===== Форма графика ===== */
+.schedule-form {
+  margin-bottom: 24px;
+}
+
+.schedule-form__field {
+  margin-bottom: 16px;
+}
+
+.schedule-form__field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.schedule-form__field input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.schedule-form__field input:focus {
+  outline: none;
+  border-color: #06d6a0;
+}
+
+.schedule-form__row {
+  display: flex;
+  gap: 12px;
+}
+
+.schedule-form__row .schedule-form__field {
+  flex: 1;
+}
+
+.schedule-form__submit {
+  width: 100%;
+  padding: 14px;
+  background: #06d6a0;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.schedule-form__submit:hover {
+  background: #05c08f;
+}
+
+.schedule-list h3 {
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.schedule-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.schedule-list__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.schedule-list__info span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.schedule-list__remove {
+  background: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.schedule-list__remove:hover {
+  background: #e55a5a;
+}
+
+/* ===== Календарь ===== */
+.calendar__today {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.calendar {
+  background: #f8f9fa;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.calendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.calendar__month {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.calendar__nav {
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.calendar__nav:hover {
+  background: #5a6fd6;
+}
+
+.calendar__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.calendar__weekday {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #888;
+  padding: 8px 0;
+}
+
+.calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar__cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.calendar__cell:hover {
+  background: #e8ecf8;
+}
+
+.calendar__cell--empty {
+  background: transparent;
+  cursor: default;
+}
+
+.calendar__cell--today {
+  background: #667eea;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+.calendar__cell--today:hover {
+  background: #5a6fd6;
+}
+
+.calendar__today-btn {
+  display: block;
+  margin: 16px auto 0;
+  padding: 10px 24px;
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.calendar__today-btn:hover {
+  background: #5a6fd6;
+}

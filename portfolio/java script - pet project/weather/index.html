@@ -9,6 +9,213 @@
 </head>
 
 <body>
+    <div class="app">
+        <header class="app-header">
+            <h1>Одеться по погоде</h1>
+
+            <form id="searchForm" class="search" autocomplete="off">
+                <input id="cityInput" class="search__input" type="text" placeholder="Введите город" />
+                <button class="search__btn" type="submit" title="Найти город">🔍</button>
+                <button id="geoBtn" class="search__btn" type="button" title="Определить моё местоположение">📍</button>
+            </form>
+
+            <label class="toggle" title="Показать, в чём можно бежать">
+                <input id="sportToggle" class="toggle__input" type="checkbox" />
+                <span class="toggle__track"><span class="toggle__thumb"></span></span>
+                <span class="toggle__label">Спортивный режим</span>
+            </label>
+        </header>
+
+        <main class="layout">
+            <section class="card card--figure" aria-label="Как одеться">
+                <svg id="figure" viewBox="0 0 240 400" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-labelledby="figureTitle">
+                    <title id="figureTitle">Схематичный человек, одетый по погоде</title>
+
+                    <!-- ===== Базовая фигура (всегда видна) ===== -->
+                    <g id="shadow">
+                        <ellipse cx="120" cy="344" rx="55" ry="10" fill="rgba(0,0,0,0.14)" />
+                    </g>
+                    <g id="legs-base">
+                        <rect x="88" y="216" width="27" height="112" rx="12" fill="#e8b48c" />
+                        <rect x="125" y="216" width="27" height="112" rx="12" fill="#e8b48c" />
+                    </g>
+                    <g id="arms-base">
+                        <path d="M 92 118 C 70 118 60 150 58 196 C 57 216 60 222 64 224" fill="none"
+                            stroke="#e8b48c" stroke-width="15" stroke-linecap="round" />
+                        <path d="M 148 118 C 170 118 180 150 182 196 C 183 216 180 222 176 224" fill="none"
+                            stroke="#e8b48c" stroke-width="15" stroke-linecap="round" />
+                    </g>
+                    <g id="head-base">
+                        <rect x="110" y="78" width="20" height="32" rx="8" fill="#e8b48c" />
+                        <circle cx="120" cy="56" r="30" fill="#e8b48c" />
+                        <circle cx="109" cy="53" r="2.5" fill="#33221a" />
+                        <circle cx="131" cy="53" r="2.5" fill="#33221a" />
+                        <path d="M 112 66 Q 120 74 128 66" fill="none" stroke="#33221a" stroke-width="2"
+                            stroke-linecap="round" />
+                        <circle cx="86" cy="59" r="3.5" fill="#f3c6a5" />
+                        <circle cx="154" cy="59" r="3.5" fill="#f3c6a5" />
+                    </g>
+
+                    <!-- ===== Верх (эксклюзивные варианты) ===== -->
+                    <g id="top-tshirt" class="cloth-layer">
+                        <path d="M 88 122 C 76 124 72 138 70 154 L 70 208 L 170 208 L 170 154 C 168 138 164 124 152 122 Z"
+                            fill="#ff7a59" stroke="#d95f43" stroke-width="2" />
+                        <path d="M 92 118 C 72 118 66 138 64 158" fill="none" stroke="#ff7a59" stroke-width="16"
+                            stroke-linecap="round" />
+                        <path d="M 148 118 C 168 118 174 138 176 158" fill="none" stroke="#ff7a59" stroke-width="16"
+                            stroke-linecap="round" />
+                    </g>
+
+                    <g id="top-tank" class="cloth-layer">
+                        <path d="M 88 122 C 76 124 72 138 70 154 L 70 208 L 170 208 L 170 154 C 168 138 164 124 152 122 Z"
+                            fill="#4db6ac" stroke="#39948b" stroke-width="2" />
+                        <path d="M 120 122 C 112 122 110 128 110 132" fill="none" stroke="#39948b" stroke-width="2"
+                            stroke-linecap="round" />
+                    </g>
+
+                    <g id="top-longsleeve" class="cloth-layer">
+                        <path d="M 88 122 C 76 124 72 138 70 154 L 70 208 L 170 208 L 170 154 C 168 138 164 124 152 122 Z"
+                            fill="#8e24aa" stroke="#6d1b83" stroke-width="2" />
+                        <path d="M 92 118 C 72 118 66 138 64 224" fill="none" stroke="#8e24aa" stroke-width="16"
+                            stroke-linecap="round" />
+                        <path d="M 148 118 C 168 118 174 138 176 224" fill="none" stroke="#8e24aa" stroke-width="16"
+                            stroke-linecap="round" />
+                    </g>
+
+                    <g id="top-jacket" class="cloth-layer">
+                        <path d="M 88 122 C 76 124 72 138 70 154 L 70 208 L 170 208 L 170 154 C 168 138 164 124 152 122 Z"
+                            fill="#5c6bc0" stroke="#45518f" stroke-width="2" />
+                        <path d="M 92 118 C 72 118 66 138 64 224" fill="none" stroke="#5c6bc0" stroke-width="16"
+                            stroke-linecap="round" />
+                        <path d="M 148 118 C 168 118 174 138 176 224" fill="none" stroke="#5c6bc0" stroke-width="16"
+                            stroke-linecap="round" />
+                        <line x1="120" y1="124" x2="120" y2="208" stroke="#45518f" stroke-width="2" />
+                    </g>
+
+                    <g id="top-windbreaker" class="cloth-layer">
+                        <path d="M 88 122 C 76 124 72 138 70 154 L 70 208 L 170 208 L 170 154 C 168 138 164 124 152 122 Z"
+                            fill="#29b6f6" stroke="#0288d1" stroke-width="2" />
+                        <path d="M 92 118 C 72 118 66 138 64 224" fill="none" stroke="#29b6f6" stroke-width="16"
+                            stroke-linecap="round" />
+                        <path d="M 148 118 C 168 118 174 138 176 224" fill="none" stroke="#29b6f6" stroke-width="16"
+                            stroke-linecap="round" />
+                        <line x1="120" y1="124" x2="120" y2="208" stroke="#0288d1" stroke-width="2" />
+                        <path d="M 92 174 L 148 188" stroke="#b3e5fc" stroke-width="6" stroke-linecap="round" />
+                    </g>
+
+                    <g id="top-coat" class="cloth-layer">
+                        <path d="M 88 122 C 76 124 72 138 70 154 L 70 214 L 170 214 L 170 154 C 168 138 164 124 152 122 Z"
+                            fill="#455a64" stroke="#2f3e46" stroke-width="2" />
+                        <path d="M 92 118 C 72 118 66 138 64 224" fill="none" stroke="#455a64" stroke-width="16"
+                            stroke-linecap="round" />
+                        <path d="M 148 118 C 168 118 174 138 176 224" fill="none" stroke="#455a64" stroke-width="16"
+                            stroke-linecap="round" />
+                        <line x1="120" y1="124" x2="120" y2="214" stroke="#2f3e46" stroke-width="2" />
+                        <path d="M 104 130 Q 120 122 136 130" fill="none" stroke="#78909c" stroke-width="4"
+                            stroke-linecap="round" />
+                    </g>
+
+                    <g id="top-rainjacket" class="cloth-layer">
+                        <path d="M 88 122 C 76 124 72 138 70 154 L 70 208 L 170 208 L 170 154 C 168 138 164 124 152 122 Z"
+                            fill="#00acc1" stroke="#00838f" stroke-width="2" />
+                        <path d="M 92 118 C 72 118 66 138 64 224" fill="none" stroke="#00acc1" stroke-width="16"
+                            stroke-linecap="round" />
+                        <path d="M 148 118 C 168 118 174 138 176 224" fill="none" stroke="#00acc1" stroke-width="16"
+                            stroke-linecap="round" />
+                        <line x1="120" y1="124" x2="120" y2="208" stroke="#00838f" stroke-width="2" />
+                        <circle cx="120" cy="150" r="3" fill="#b2ebf2" />
+                    </g>
+
+                    <!-- ===== Низ (эксклюзивные варианты) ===== -->
+                    <g id="bottom-shorts" class="cloth-layer">
+                        <rect x="82" y="216" width="76" height="48" rx="10" fill="#4a90e2" stroke="#3572b5" stroke-width="2" />
+                    </g>
+                    <g id="bottom-pants" class="cloth-layer">
+                        <rect x="88" y="214" width="27" height="114" rx="10" fill="#3e5c76" stroke="#2d4356" stroke-width="2" />
+                        <rect x="125" y="214" width="27" height="114" rx="10" fill="#3e5c76" stroke="#2d4356" stroke-width="2" />
+                    </g>
+                    <g id="bottom-thermal" class="cloth-layer">
+                        <rect x="88" y="214" width="27" height="114" rx="10" fill="#7b5aa6" stroke="#5d4280" stroke-width="2" />
+                        <rect x="125" y="214" width="27" height="114" rx="10" fill="#7b5aa6" stroke="#5d4280" stroke-width="2" />
+                    </g>
+                    <g id="bottom-sportshorts" class="cloth-layer">
+                        <rect x="82" y="216" width="76" height="40" rx="10" fill="#ff8a3d" stroke="#e2701f" stroke-width="2" />
+                        <line x1="86" y1="228" x2="154" y2="228" stroke="#e2701f" stroke-width="2" />
+                    </g>
+                    <g id="bottom-tights" class="cloth-layer">
+                        <rect x="88" y="214" width="27" height="114" rx="10" fill="#232327" stroke="#111113" stroke-width="2" />
+                        <rect x="125" y="214" width="27" height="114" rx="10" fill="#232327" stroke="#111113" stroke-width="2" />
+                    </g>
+
+                    <!-- ===== Обувь (эксклюзивные варианты) ===== -->
+                    <g id="feet-sneakers" class="cloth-layer">
+                        <ellipse cx="96" cy="328" rx="19" ry="12" fill="#ffffff" stroke="#cfd8dc" stroke-width="2" />
+                        <ellipse cx="144" cy="328" rx="19" ry="12" fill="#ffffff" stroke="#cfd8dc" stroke-width="2" />
+                        <path d="M 78 334 Q 96 344 114 334" fill="none" stroke="#cfd8dc" stroke-width="2" />
+                        <path d="M 126 334 Q 144 344 162 334" fill="none" stroke="#cfd8dc" stroke-width="2" />
+                    </g>
+                    <g id="feet-boots" class="cloth-layer">
+                        <rect x="78" y="310" width="36" height="26" rx="8" fill="#5d4037" stroke="#3e2a22" stroke-width="2" />
+                        <rect x="126" y="310" width="36" height="26" rx="8" fill="#5d4037" stroke="#3e2a22" stroke-width="2" />
+                        <line x1="78" y1="318" x2="114" y2="318" stroke="#3e2a22" stroke-width="2" />
+                        <line x1="126" y1="318" x2="162" y2="318" stroke="#3e2a22" stroke-width="2" />
+                    </g>
+
+
+                    <!-- ===== Голова / аксессуары (эксклюзивные варианты) ===== -->
+                    <g id="head-beanie" class="cloth-layer">
+                        <path d="M 90 46 A 30 30 0 0 1 150 46 L 150 30 Q 150 16 136 16 L 104 16 Q 90 16 90 30 Z"
+                            fill="#ef5350" stroke="#c62828" stroke-width="2" />
+                    </g>
+                    <g id="head-cap" class="cloth-layer">
+                        <path d="M 90 44 A 30 30 0 0 1 150 44 L 150 38 L 90 38 Z" fill="#26a69a" stroke="#00796b" stroke-width="2" />
+                        <path d="M 146 40 L 182 34 Q 180 44 172 46 L 148 48 Z" fill="#26a69a" stroke="#00796b" stroke-width="2" />
+                    </g>
+
+                    <!-- ===== Независимые аксессуары ===== -->
+                    <g id="acc-umbrella" class="cloth-layer">
+                        <line x1="138" y1="210" x2="138" y2="70" stroke="#5d4037" stroke-width="3" />
+                        <path d="M 138 70 Q 126 76 122 70" fill="none" stroke="#5d4037" stroke-width="3" stroke-linecap="round" />
+                        <path d="M 104 70 A 34 34 0 0 1 172 70 Z" fill="#42a5f5" stroke="#1e88e5" stroke-width="2" />
+                        <path d="M 104 70 A 34 34 0 0 1 172 70" fill="none" stroke="#bbdefb" stroke-width="2" />
+                    </g>
+                    <g id="acc-gloves" class="cloth-layer">
+                        <circle cx="64" cy="225" r="10" fill="#8d6e63" stroke="#5d4037" stroke-width="2" />
+                        <circle cx="176" cy="225" r="10" fill="#8d6e63" stroke="#5d4037" stroke-width="2" />
+                    </g>
+                    <g id="acc-scarf" class="cloth-layer">
+                        <path d="M 104 92 Q 120 104 136 92 Q 128 96 120 96 Q 112 96 104 92 Z" fill="#ff7043"
+                            stroke="#e64a19" stroke-width="2" />
+                        <path d="M 118 98 Q 124 112 118 128 L 112 128 Q 116 112 112 100 Z" fill="#ff7043"
+                            stroke="#e64a19" stroke-width="2" />
+                    </g>
+                    <g id="acc-sunglasses" class="cloth-layer">
+                        <rect x="98" y="44" width="20" height="12" rx="5" fill="#212121" />
+                        <rect x="122" y="44" width="20" height="12" rx="5" fill="#212121" />
+                        <line x1="118" y1="50" x2="122" y2="50" stroke="#212121" stroke-width="2" />
+                    </g>
+                </svg>
+            </section>
+
+            <section class="card card--info">
+                <div class="weather">
+                    <p class="weather__location">—</p>
+                    <p class="weather__temp">—</p>
+                    <p class="weather__desc">—</p>
+                    <p class="weather__meta" id="weatherMeta"></p>
+                </div>
+
+                <h2 class="section-title">Что надеть</h2>
+                <ul id="adviceList" class="advice"></ul>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            Данные о погоде: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (без
+            регистрации)
+        </footer>
+    </div>
 
     <script src="./js/main.js"></script>
 </body>
